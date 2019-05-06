@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\BodyComponent.h" />
+    <ClInclude Include="Source\Component.h" />
+    <ClInclude Include="Source\ContactListener.h" />
+    <ClInclude Include="Source\CrazyPersonBehaviorComponent.h" />
+    <ClInclude Include="Source\Definitions.h" />
+    <ClInclude Include="Source\Engine.h" />
+    <ClInclude Include="Source\GraphicsDevice.h" />
+    <ClInclude Include="Source\Initializers.h" />
+    <ClInclude Include="Source\InputComponent.h" />
+    <ClInclude Include="Source\InputDevice.h" />
+    <ClInclude Include="Source\Library.h" />
+    <ClInclude Include="Source\Object.h" />
+    <ClInclude Include="Source\ObjectFactory.h" />
+    <ClInclude Include="Source\PhysicsDevice.h" />
+    <ClInclude Include="Source\RabidRacoonBehaviorComponent.h" />
+    <ClInclude Include="Source\RacoonBehaviorComponent.h" />
+    <ClInclude Include="Source\SoundDevice.h" />
+    <ClInclude Include="Source\SpriteComponent.h" />
+    <ClInclude Include="Source\Texture.h" />
+    <ClInclude Include="Source\TimedLifeComponent.h" />
+    <ClInclude Include="Source\Timer.h" />
+    <ClInclude Include="Source\View.h" />
+    <ClInclude Include="Third Party\tinyxml2-master\tinyxml2.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\BodyComponent.cpp" />
+    <ClCompile Include="Source\Component.cpp" />
+    <ClCompile Include="Source\ContactListener.cpp" />
+    <ClCompile Include="Source\CrazyPersonBehaviorComponent.cpp" />
+    <ClCompile Include="Source\Engine.cpp" />
+    <ClCompile Include="Source\GraphicsDevice.cpp" />
+    <ClCompile Include="Source\InputComponent.cpp" />
+    <ClCompile Include="Source\InputDevice.cpp" />
+    <ClCompile Include="Source\Library.cpp" />
+    <ClCompile Include="Source\Object.cpp" />
+    <ClCompile Include="Source\ObjectFactory.cpp" />
+    <ClCompile Include="Source\PhysicsDevice.cpp" />
+    <ClCompile Include="Source\RabidRacoonBehaviorComponent.cpp" />
+    <ClCompile Include="Source\RacoonBehaviorComponent.cpp" />
+    <ClCompile Include="Source\SoundDevice.cpp" />
+    <ClCompile Include="Source\Source.cpp" />
+    <ClCompile Include="Source\SpriteComponent.cpp" />
+    <ClCompile Include="Source\Texture.cpp" />
+    <ClCompile Include="Source\TimedLifeComponent.cpp" />
+    <ClCompile Include="Source\Timer.cpp" />
+    <ClCompile Include="Source\View.cpp" />
+    <ClCompile Include="Third Party\tinyxml2-master\tinyxml2.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Assets\Config\config.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{754B722A-F1A1-4026-8406-A463F8296A82}</ProjectGuid>
+    <RootNamespace>ContractorQuest</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(ProjectDir)Game\</OutDir>
+    <IntDir>$(ProjectDir)Temp\</IntDir>
+    <IncludePath>$(ProjectDir)Third Party\SDL2_image\include;$(ProjectDir)Third Party\SDL2\include;$(ProjectDir)Third Party\SDL2_ttf\include;$(ProjectDir)Third Party\tinyxml2-master;$(ProjectDir)Third Party\SDL2_gfx;$(ProjectDir)Third Party\Box2D_new;$(ProjectDir)Third Party\SDL2_mixer\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(ProjectDir)Third Party\SDL2_ttf\lib\x86;$(ProjectDir)Third Party\SDL2_image\lib\x86;$(ProjectDir)Third Party\SDL2\lib\x86;$(ProjectDir)Third Party\Box2D_new\Box2D\lib;$(ProjectDir)Third Party\SDL2_mixer\lib\x86;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <PostBuildEvent>
+      <Command>xcopy "$(ProjectDir)Assets" "$(ProjectDir)Game\Assets" /E /I /F /Y
+move "$(ProjectDir)*.dll" "$(ProjectDir)Game"</Command>
+    </PostBuildEvent>
+    <PreBuildEvent>
+      <Command>copy "$(ProjectDir)Third Party\SDL2\lib\x86\*.dll" "$(ProjectDir)"
+copy "$(ProjectDir)Third Party\SDL2_image\lib\x86\*.dll" "$(ProjectDir)"
+copy "$(ProjectDir)Third Party\SDL2_ttf\lib\x86\*.dll" "$(ProjectDir)"
+copy "$(ProjectDir)Third Party\SDL2_mixer\lib\x86\*.dll" "$(ProjectDir)</Command>
+    </PreBuildEvent>
+    <Link>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;SDL2_ttf.lib;Box2D.lib;SDL2_mixer.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

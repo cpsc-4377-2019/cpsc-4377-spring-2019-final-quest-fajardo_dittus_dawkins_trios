@@ -1,0 +1,35 @@
+﻿  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2\lib\x86\SDL2.dll
+          1 file(s) copied.
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_image\lib\x86\libjpeg-9.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_image\lib\x86\libpng16-16.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_image\lib\x86\libtiff-5.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_image\lib\x86\libwebp-7.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_image\lib\x86\SDL2_image.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_image\lib\x86\zlib1.dll
+          6 file(s) copied.
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_ttf\lib\x86\libfreetype-6.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_ttf\lib\x86\SDL2_ttf.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_ttf\lib\x86\zlib1.dll
+          3 file(s) copied.
+  RabidRacoonBehaviorComponent.cpp
+c:\users\david\documents\github\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\contractor quest\contractor quest\source\rabidracoonbehaviorcomponent.cpp(29): warning C4018: '<': signed/unsigned mismatch
+  Contractor Quest.vcxproj -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Contractor Quest.exe
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Config\config.xml -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Config\config.xml
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\Block.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\Block.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\CrazyPerson.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\CrazyPerson.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\CrazyPersonArm.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\CrazyPersonArm.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\Player.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\Player.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\RabidRacoon.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\RabidRacoon.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\Racoon.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\Racoon.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\Rock.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\Rock.png
+  8 File(s) copied
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libfreetype-6.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libjpeg-9.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libpng16-16.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libtiff-5.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libwebp-7.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\SDL2.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\SDL2_image.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\SDL2_ttf.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\zlib1.dll
+          9 file(s) moved.
