@@ -11,25 +11,123 @@
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_ttf\lib\x86\SDL2_ttf.dll
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_ttf\lib\x86\zlib1.dll
           3 file(s) copied.
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_mixer\lib\x86\libFLAC-8.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_mixer\lib\x86\libmodplug-1.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_mixer\lib\x86\libmpg123-0.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_mixer\lib\x86\libogg-0.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_mixer\lib\x86\libopus-0.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_mixer\lib\x86\libopusfile-0.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_mixer\lib\x86\libvorbis-0.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_mixer\lib\x86\libvorbisfile-3.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_mixer\lib\x86\SDL2_mixer.dll
+          9 file(s) copied.
+  BodyComponent.cpp
+  Component.cpp
+  ContactListener.cpp
+  CrazyPersonBehaviorComponent.cpp
+c:\users\david\documents\github\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\contractor quest\contractor quest\source\crazypersonbehaviorcomponent.cpp(37): warning C4018: '<': signed/unsigned mismatch
+  Engine.cpp
+c:\users\david\documents\github\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\contractor quest\contractor quest\source\engine.cpp(73): warning C4018: '<': signed/unsigned mismatch
+  GraphicsDevice.cpp
+  InputComponent.cpp
+  InputDevice.cpp
+  Library.cpp
+  Object.cpp
+  ObjectFactory.cpp
+  PhysicsDevice.cpp
   RabidRacoonBehaviorComponent.cpp
 c:\users\david\documents\github\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\contractor quest\contractor quest\source\rabidracoonbehaviorcomponent.cpp(29): warning C4018: '<': signed/unsigned mismatch
+  RacoonBehaviorComponent.cpp
+  SoundDevice.cpp
+  Source.cpp
+  SpriteComponent.cpp
+  Texture.cpp
+  TimedLifeComponent.cpp
+  Timer.cpp
+  Generating Code...
+  Compiling...
+  View.cpp
+  tinyxml2.cpp
+  Generating Code...
+Box2D.lib(b2ChainShape.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2ChainShape.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2CircleShape.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2CircleShape.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2EdgeShape.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2EdgeShape.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2PolygonShape.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2PolygonShape.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2BroadPhase.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2BroadPhase.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2CollideCircle.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2CollideCircle.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2CollideEdge.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2CollideEdge.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2CollidePolygon.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2CollidePolygon.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Collision.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Collision.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Distance.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Distance.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2DynamicTree.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2DynamicTree.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2TimeOfImpact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2TimeOfImpact.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2BlockAllocator.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2BlockAllocator.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Draw.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Draw.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Math.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Math.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Settings.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Settings.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2StackAllocator.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2StackAllocator.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Timer.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Timer.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2ChainAndCircleContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2ChainAndCircleContact.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2ChainAndPolygonContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2ChainAndPolygonContact.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2CircleContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2CircleContact.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Contact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Contact.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2ContactSolver.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2ContactSolver.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2EdgeAndCircleContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2EdgeAndCircleContact.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2EdgeAndPolygonContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2EdgeAndPolygonContact.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2PolygonAndCircleContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2PolygonAndCircleContact.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2PolygonContact.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2PolygonContact.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2DistanceJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2DistanceJoint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2FrictionJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2FrictionJoint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2GearJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2GearJoint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Joint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Joint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2MotorJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2MotorJoint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2MouseJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2MouseJoint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2PrismaticJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2PrismaticJoint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2PulleyJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2PulleyJoint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2RevoluteJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2RevoluteJoint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2RopeJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2RopeJoint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2WeldJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2WeldJoint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2WheelJoint.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2WheelJoint.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Body.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Body.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2ContactManager.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2ContactManager.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Fixture.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Fixture.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2Island.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2Island.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2World.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2World.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
+Box2D.lib(b2WorldCallbacks.obj) : warning LNK4099: PDB 'Box2D.pdb' was not found with 'Box2D.lib(b2WorldCallbacks.obj)' or at 'C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Box2D.pdb'; linking object as if no debug info
   Contractor Quest.vcxproj -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Contractor Quest.exe
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Config\config.xml -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Config\config.xml
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\Block.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\Block.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\BlockUnder.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\BlockUnder.png
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\CrazyPerson.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\CrazyPerson.png
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\CrazyPersonArm.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\CrazyPersonArm.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\CrazyPersonLeft.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\CrazyPersonLeft.png
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\Player.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\Player.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\PlayerRight.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\PlayerRight.png
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\RabidRacoon.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\RabidRacoon.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\RabidRacoonRight.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\RabidRacoonRight.png
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\Racoon.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\Racoon.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\RacoonRight.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\RacoonRight.png
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\Rock.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\Rock.png
-  8 File(s) copied
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\Tree.png -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\Tree.png
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Sounds\background.ogg -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Sounds\background.ogg
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Sounds\walking.ogg -> C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Sounds\walking.ogg
+  16 File(s) copied
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libFLAC-8.dll
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libfreetype-6.dll
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libjpeg-9.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libmodplug-1.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libmpg123-0.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libogg-0.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libopus-0.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libopusfile-0.dll
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libpng16-16.dll
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libtiff-5.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libvorbis-0.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libvorbisfile-3.dll
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libwebp-7.dll
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\SDL2.dll
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\SDL2_image.dll
+  C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\SDL2_mixer.dll
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\SDL2_ttf.dll
   C:\Users\David\Documents\GitHub\cpsc-4377-spring-2019-quest-5-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\zlib1.dll
-          9 file(s) moved.
+         18 file(s) moved.
