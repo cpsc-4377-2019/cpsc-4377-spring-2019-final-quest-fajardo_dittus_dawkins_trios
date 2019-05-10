@@ -39,7 +39,7 @@ Engine::Engine(string levelPath)
 	objectLibrary = new Library(graphicsDevice);
 	soundDevice->getLibrary(objectLibrary);
 	factory = new ObjectFactory(graphicsDevice, objectLibrary);
-	inputDevice = new InputDevice();
+	inputDevice = new InputDevice(soundDevice);
 	
 
 	pDevice = new PhysicsDevice(GRAVITY);

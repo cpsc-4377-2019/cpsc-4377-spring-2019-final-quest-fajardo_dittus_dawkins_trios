@@ -295,4 +295,18 @@
 		<Component name= "Sprite" path = "./Assets/Images/RabidRacoon.png"/>
 		<Component name = "RabidRacoonBehaviorComponent"/>
 	</Object>
+<!-- Commented it out until level layout is figured out
+  <Object elementType="Object" type="Building">
+    <Component name="Body" posX="800.0f" posY="350.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/Building.png"/>
+  </Object>
+  <Object elementType="Object" type="Lunchbox">
+    <Component name="Body" posX="800.0f" posY="350.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/Lunchbox.png"/>
+  </Object>
+  <Object elementType="Object" type="Concrete">
+    <Component name="Body" posX="800.0f" posY="350.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/concrete.png"/>
+  </Object>
+  -->
 </Level>

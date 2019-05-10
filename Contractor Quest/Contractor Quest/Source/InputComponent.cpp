@@ -26,11 +26,11 @@ Object* InputComponent::update(vector<Object*> objects) {
 		body->setLinearImpulse({ 0.0f, FAST_FALL_SPEED });
 	}
 	if (getEvent(InputDevice::LEFT)) {
-		sDevice->playSound("walking", -1);
+		sDevice->playSound("walking", 1, 2);
 		body->setLinearVelocity({(pDevice->GetLinearVelocity(owner).x - (RUN_SPEED*DT)), (pDevice->GetLinearVelocity(owner)).y});
 	}
 	if (getEvent(InputDevice::RIGHT)) {
-		sDevice->playSound("walking", -1);
+		sDevice->playSound("walking", 1, 2);
 		body->setLinearVelocity({ (pDevice->GetLinearVelocity(owner).x + (RUN_SPEED*DT)), (pDevice->GetLinearVelocity(owner)).y });
 	}
 

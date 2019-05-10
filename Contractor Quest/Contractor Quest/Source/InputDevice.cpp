@@ -1,6 +1,7 @@
 #include "InputDevice.h"
 
-InputDevice::InputDevice() {
+InputDevice::InputDevice(SoundDevice* sDevice) {
+	this->sDevice = sDevice;
 	event = new SDL_Event;
 
 	for (int i = 0; i <= NUM_EVENTS; i++) {
@@ -16,10 +17,12 @@ InputDevice::UserInputs InputDevice::translate() {
 	switch (event->key.keysym.sym) {
 		case SDLK_LEFT:
 		case SDLK_a:
+			sDevice->soundDirection = sDevice->updateSoundDirection(0, 360, sDevice->soundDirection, -sDevice->directionIncrement);
 			return UserInputs::LEFT;
 			break;
 		case SDLK_RIGHT:
 		case SDLK_d:
+			sDevice->soundDirection = sDevice->updateSoundDirection(0, 360, sDevice->soundDirection, sDevice->directionIncrement);
 			return UserInputs::RIGHT;
 			break;
 		case SDLK_UP:
@@ -31,7 +34,6 @@ InputDevice::UserInputs InputDevice::translate() {
 			return UserInputs::DOWN;
 			break;
 	}
-
 	return UserInputs::NONE;
 }
 
