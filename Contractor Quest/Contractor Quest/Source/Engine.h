@@ -22,7 +22,7 @@ class Engine {
 public:
 
 	Engine();
-	Engine(string);
+	Engine(vector<string>);
 	~Engine();
 
 	void reset();
@@ -45,6 +45,8 @@ private:
 	View* view;
 	SoundDevice* soundDevice;
 
+	int currentLevel;
+	vector<string> levels;
 };
 
 #endif

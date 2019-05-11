@@ -28,10 +28,11 @@ Engine::Engine()
 	}
 
 	view = graphicsDevice->getView();
+	currentLevel = 0;
 }
 
 //constructor that loads level
-Engine::Engine(string levelPath)
+Engine::Engine(vector<string> levelPaths)
 {
 	//Initilize devices/members.
 	graphicsDevice = new GraphicsDevice(1024, 768, true);
@@ -40,7 +41,6 @@ Engine::Engine(string levelPath)
 	soundDevice->getLibrary(objectLibrary);
 	factory = new ObjectFactory(graphicsDevice, objectLibrary);
 	inputDevice = new InputDevice(soundDevice);
-	
 
 	pDevice = new PhysicsDevice(GRAVITY);
 	if (!pDevice->Initialize()) {
@@ -58,7 +58,11 @@ Engine::Engine(string levelPath)
 
 	view = graphicsDevice->getView();
 
-	loadLevel(levelPath);
+	levels = levelPaths;
+	currentLevel = 0;
+
+	//Load the first level
+	loadLevel(levels.at(currentLevel));
 }
 
 //deconstructor
@@ -66,9 +70,9 @@ Engine::~Engine() {
 
 }
 
-//Deletes view and empties object vector.
+//Resets view and empties object vector.
 void Engine::reset() {
-	delete view;
+	view->update(0.0f);
 
 	for (int i = 0; i < objects.size(); i++) {
 		delete objects.at(i);
@@ -157,6 +161,11 @@ void Engine::update() {
 		view->update(playerBody->getPosX() - (graphicsDevice->SCREEN_WIDTH / 2));
 	}
 
+	//Player dies if they fall below the screen
+	if (playerBody->getPosY() > (view->getPosY() + (graphicsDevice->SCREEN_HEIGHT))) {
+		player->setIsDead(true);
+	}
+
 	//Add dynamically created objects to engine's objects vector.
 	for (objectIter = newObjectVector.begin(); objectIter < newObjectVector.end(); objectIter++) {
 		objects.push_back((*objectIter));
@@ -181,13 +190,34 @@ bool Engine::run() {
 		return false;
 	}
 
-	//Locate player
+	//Handle Win and Loss conditions
 	vector<Object*>::iterator objectIter;
 	for (objectIter = objects.begin(); objectIter < objects.end(); objectIter++) {
+
+		//If the player dies, Game Over
 		if ((*objectIter)->getType() == "Player") {
 			if ((*objectIter)->getIsDead()) {
-				cout << "Player died.  Game Over" << endl; //FIXME: May remove later.
+				cout << "Player died.  Game Over" << endl;
 				return false;
+			}
+		}
+
+		//If level is complete, transition to the next level or end the game if there are no others
+		else if ((*objectIter)->getType() == "Building" || (*objectIter)->getType() == "Lunchbox") {
+			if ((*objectIter)->getIsDead()) {
+
+				cout << "Level Complete!" << endl;
+				currentLevel++;
+
+				//Go to next level if there are others
+				if (currentLevel < NUM_LEVELS) {
+					reset();
+					loadLevel(levels.at(currentLevel));
+					break;
+				}
+
+				//End the game if there are no more levels
+				else return false;
 			}
 		}
 	}

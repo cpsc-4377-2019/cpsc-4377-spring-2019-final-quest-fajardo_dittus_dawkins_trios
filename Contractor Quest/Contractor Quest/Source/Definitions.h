@@ -65,5 +65,6 @@ const EngineFloat PI = 3.14159f;
 const EngineFloat DT = (1.0f / 100.0f);
 const EngineFloat fPRV = 10.0f;
 const Position GRAVITY = { 0.0f, 2000.0f };	//Adjust as needed
+const int NUM_LEVELS = 2;	//Adjust as needed
 
 #endif

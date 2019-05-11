@@ -71,6 +71,7 @@
     <Xml Include="Assets\Config\config.xml">
       <SubType>Designer</SubType>
     </Xml>
+    <Xml Include="Assets\Config\config2.xml" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>15.0</VCProjectVersion>

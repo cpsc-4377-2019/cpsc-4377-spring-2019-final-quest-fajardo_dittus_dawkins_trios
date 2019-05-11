@@ -62,7 +62,6 @@ ObjectFactory::ObjectFactory(GraphicsDevice* gDevice, Library* objectLibrary)
 	this->objectLibrary = objectLibrary;
 }
 
-//Are they all getting set to static?
 Object* ObjectFactory::create(tinyxml2::XMLElement* objectElement, GraphicsDevice* graphicDevice, Library* objectLibrary, InputDevice* inputDevice, PhysicsDevice* pDevice, SoundDevice* sDevice)
 {
 	Object* newObject = new Object();

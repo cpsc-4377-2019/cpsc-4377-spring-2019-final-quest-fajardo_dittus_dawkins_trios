@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Level>
+  
+  <Object elementType="Object" type="Concrete">
+    <Component name= "Body" posX="100.0f" posY="400.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+  </Object>
+  <Object elementType="Object" type="Concrete">
+    <Component name= "Body" posX="135.0f" posY="400.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+  </Object>
+  <Object elementType="Object" type="Concrete">
+    <Component name= "Body" posX="170.0f" posY="400.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+  </Object>
+  <Object elementType="Object" type="Concrete">
+    <Component name= "Body" posX="205.0f" posY="400.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+  </Object>
+  
+  <Object elementType="Object" type="Player">
+    <Component name="Body" posX="100.0f" posY="50.0f" angle="0.0f" state="1" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/Player.png"/>
+    <Component name= "InputComponent"/>
+  </Object>
+
+  <Object elementType="Object" type="Lunchbox">
+    <Component name= "Body" posX="205.0f" posY="300.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/Lunchbox.png"/>
+  </Object>
+  
+</Level>

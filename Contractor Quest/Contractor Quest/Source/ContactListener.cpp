@@ -15,6 +15,10 @@ void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold
 	Object* objectA = static_cast<Object*>(bodyA->GetUserData());
 	Object* objectB = static_cast<Object*>(bodyB->GetUserData());
 
+	//If the player collides with the building or lunchbox, destroy the object (ending the level)
+	if (objectA->getType() == "Player" && (objectB->getType() == "Building" || objectB->getType() == "Lunchbox")) objectB->setIsDead(true);
+	else if ((objectA->getType() == "Building" || objectA->getType() == "Lunchbox") && objectB->getType() == "Player") objectA->setIsDead(true);
+
 	//If a rock collides with the player, set both objects to be destroyed.
 	if (objectA->getType() == "Player" && objectB->getType() == "Rock" || 
 		objectA->getType() == "Rock" && objectB->getType() == "Player") {

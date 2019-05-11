@@ -181,5 +181,8 @@
     <Xml Include="Assets\Config\config.xml">
       <Filter>Resource Files</Filter>
     </Xml>
+    <Xml Include="Assets\Config\config2.xml">
+      <Filter>Resource Files</Filter>
+    </Xml>
   </ItemGroup>
 </Project>

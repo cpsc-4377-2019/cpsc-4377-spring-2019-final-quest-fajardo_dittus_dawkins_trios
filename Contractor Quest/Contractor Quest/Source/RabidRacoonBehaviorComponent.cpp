@@ -20,7 +20,7 @@ Object* RabidRacoonBehaviorComponent::update(vector<Object*> objects) {
 
 	if (jumpCooldown > 0) jumpCooldown--;
 
-	//Locate Player and determine if the Racoon needs to avoid a stationary object
+	//Locate Player and determine if the Racoon needs to jump over an object
 	bool willJump = false;
 	Object* player = nullptr;
 	BodyComponent* currentBody;
@@ -35,9 +35,8 @@ Object* RabidRacoonBehaviorComponent::update(vector<Object*> objects) {
 			player = objects.at(i);
 		}
 
-		//Racoon will jump if a stationary object is in its way, and if jumpCooldown is 0
-		else if (jumpCooldown <= 0 && (currentBody->getBodyType() == GAME_STATIC || currentBody->getBodyType() == GAME_KINEMATIC)
-			&& objectIsInRange(currentBody, currentSprite)) {
+		//Racoon will jump if an object is in its way, and if jumpCooldown is 0
+		else if (jumpCooldown <= 0 && objectIsInRange(currentBody, currentSprite)) {
 			willJump = true;
 			jumpCooldown = COOLDOWN_TIME;	//Reset jumpCooldown
 		}

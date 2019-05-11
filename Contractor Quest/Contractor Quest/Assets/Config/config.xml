@@ -265,6 +265,7 @@
 	</Object> 
 	-->
 
+  <!--
 	<Joint elementType="Joint" type = "Distance" collide = "false" object1AnchorX="700.0f" object1AnchorY="200.0f" object2AnchorX="740.0f" object2AnchorY="195.0f" maxDistance="5.0f">
 		<Object elementType="Object" type="CrazyPerson">
 			<Component name="Body" posX="700.0f" posY="200.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
@@ -276,6 +277,7 @@
 			<Component name="Sprite" path = "./Assets/Images/CrazyPersonArm.png"/>
 		</Object>
 	</Joint>
+  -->
 
 	<Object elementType="Object" type="Player">
 		<Component name="Body" posX="100.0f" posY="50.0f" angle="0.0f" state="1" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
@@ -309,4 +311,8 @@
     <Component name= "Sprite" path = "./Assets/Images/concrete.png"/>
   </Object>
   -->
+  <Object elementType="Object" type="Lunchbox">
+    <Component name="Body" posX="800.0f" posY="350.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/Lunchbox.png"/>
+  </Object>
 </Level>
