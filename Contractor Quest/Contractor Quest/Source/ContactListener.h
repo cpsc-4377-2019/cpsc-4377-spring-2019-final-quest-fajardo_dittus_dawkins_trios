@@ -17,6 +17,7 @@ public:
 	//PreSolve helper function(s).
 	bool playerMobContact(Object* objectA, Object* objectB);
 	bool racoonBlockContact(Object* objectA, Object* objectB);
+	bool isAboveOrBelow(Object* objectA, Object* objectB);
 
 };
 

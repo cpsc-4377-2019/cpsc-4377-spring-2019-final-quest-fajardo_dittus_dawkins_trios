@@ -22,12 +22,19 @@ class InputComponent: public Component {
 
 		bool getEvent(InputDevice::UserInputs event);
 	private:
+
 		InputDevice* inputDevice;
 		PhysicsDevice* pDevice;
 		SoundDevice* sDevice;
-		const float RUN_SPEED = 100.0f;
-		const float JUMP_HEIGHT = 200.0f;
-		const float FAST_FALL_SPEED = 50.0f;
+
+		int jumpCooldown;
+		const int COOLDOWN_TIME = 100;	//FIXME: TEMPORARY! delete these if another solution is used
+
+		const float RUN_SPEED = 900.0f;
+		const float MAX_VELOCITY = 32000.0f;
+		const float JUMP_HEIGHT = 1000.0f;
+		const float FAST_FALL_SPEED = 100.0f;
+		
 };
 
 #endif

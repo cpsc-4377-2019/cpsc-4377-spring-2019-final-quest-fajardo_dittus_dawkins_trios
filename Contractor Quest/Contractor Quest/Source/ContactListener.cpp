@@ -15,6 +15,19 @@ void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold
 	Object* objectA = static_cast<Object*>(bodyA->GetUserData());
 	Object* objectB = static_cast<Object*>(bodyB->GetUserData());
 
+	//FIXME: Clean this up!
+	//if (bodyA->GetType() == b2_dynamicBody && bodyB->GetType() == b2_staticBody) {
+	//	//If objectA is above or under objectB, ignore contact
+	//	//contact->SetEnabled(false);
+	//}
+	//else if (bodyA->GetType() == b2_staticBody && bodyB->GetType() == b2_dynamicBody) {
+	//	//Vice-versa
+	//}
+	//Ensure that dynamic objects dont randomly stop when moving over static objects
+	/*if (isAboveOrBelow(objectA, objectB) &&
+		((bodyA->GetType() == b2_dynamicBody && bodyB->GetType() == b2_staticBody) ||
+		(bodyA->GetType() == b2_staticBody && bodyB->GetType() == b2_dynamicBody))) contact->SetEnabled(false);*/
+
 	//If the player collides with the building or lunchbox, destroy the object (ending the level)
 	if (objectA->getType() == "Player" && (objectB->getType() == "Building" || objectB->getType() == "Lunchbox")) objectB->setIsDead(true);
 	else if ((objectA->getType() == "Building" || objectA->getType() == "Lunchbox") && objectB->getType() == "Player") objectA->setIsDead(true);
@@ -134,4 +147,20 @@ bool ContactListener::racoonBlockContact(Object* objectA, Object* objectB) {
 	else {
 		return false;
 	}
+}
+
+//Checks if objectA is above or below objectB (may need a margin of error)
+bool ContactListener::isAboveOrBelow(Object * objectA, Object * objectB)
+{
+	bool shouldNotCollide = false;
+
+	BodyComponent* sdlBodyA = objectA->GetComponent<BodyComponent>();
+	BodyComponent* sdlBodyB = objectB->GetComponent<BodyComponent>();
+	SpriteComponent* spriteA = objectA->GetComponent<SpriteComponent>();
+	SpriteComponent* spriteB = objectB->GetComponent<SpriteComponent>();
+
+	if (sdlBodyA->getPosY() < (sdlBodyB->getPosY() - spriteA->texture->getHeight()) ||
+		sdlBodyA->getPosY() > (sdlBodyB->getPosY() + spriteB->texture->getHeight())) shouldNotCollide = true;
+
+	return shouldNotCollide;
 }

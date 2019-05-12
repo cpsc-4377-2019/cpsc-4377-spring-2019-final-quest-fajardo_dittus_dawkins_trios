@@ -18,6 +18,7 @@ class RacoonBehaviorComponent: public Component {
 		void finish();
 
 		const float RUN_SPEED = 100.0f; //FIXME: This value may need to be changed.
+
 	private:
 };
 

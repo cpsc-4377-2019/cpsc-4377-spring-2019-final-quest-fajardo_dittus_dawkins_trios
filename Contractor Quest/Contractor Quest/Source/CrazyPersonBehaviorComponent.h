@@ -17,7 +17,7 @@ class CrazyPersonBehaviorComponent : public Component {
 		void start();
 		void finish();
 	private:
-		const float AGGRO_RADIUS = 500.0f;	//FIXME: may need to adjust
+		const float AGGRO_RADIUS = 750.0f;	//FIXME: may need to adjust
 		int rockCooldown = 0;	//Timer to determine when rocks can be thrown
 		ObjectFactory* objectFactory; //Used call create to create rocks.
 };
