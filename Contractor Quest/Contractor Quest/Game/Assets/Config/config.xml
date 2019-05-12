@@ -676,6 +676,10 @@
     <Component name= "Body" posX="3200.0f" posY="596.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
     <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
   </Object>
+  <Object elementType="Object" type="Tree">
+    <Component name= "Body" posX="100.0f" posY="600.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/Tree.png"/>
+  </Object>
   
   <!-- End of Level -->
   <Object elementType="Object" type="Building">

@@ -7,6 +7,7 @@ bool InputComponent::initialize(ObjectFactoryPresets presets) {
 	this->pDevice = presets.pDevice;
 	this->sDevice = presets.sDevice;
 	jumpCooldown = 0;
+	soundTimer = 0;
 	return true;
 }
 
@@ -19,6 +20,7 @@ InputComponent::~InputComponent() {
 Object* InputComponent::update(vector<Object*> objects) {
 
 	if (jumpCooldown > 0) jumpCooldown--;
+	if (soundTimer > 0) soundTimer--;
 	
 	BodyComponent* body = owner->GetComponent<BodyComponent>();
 	if (getEvent(InputDevice::UP) && jumpCooldown <= 0) {
@@ -29,24 +31,28 @@ Object* InputComponent::update(vector<Object*> objects) {
 		body->setLinearImpulse({ 0.0f, FAST_FALL_SPEED });
 	}
 	if (getEvent(InputDevice::LEFT)) {
-		sDevice->playSound("walking", 1, 2);
+		if (soundTimer <= 0) {
+			soundTimer = SOUND_INCREMENT;
+			sDevice->playSound("walking", 0, 2);
+		}
 		if (pDevice->GetLinearVelocity(owner).x >= (-MAX_VELOCITY*DT)) {
 			body->setLinearVelocity({ (pDevice->GetLinearVelocity(owner).x - (RUN_SPEED*DT)), (pDevice->GetLinearVelocity(owner)).y });
 		}
 		else {
 			body->setLinearVelocity({ (-MAX_VELOCITY*DT), (pDevice->GetLinearVelocity(owner)).y });
 		}
-		//body->setLinearVelocity({(pDevice->GetLinearVelocity(owner).x - (RUN_SPEED*DT)), (pDevice->GetLinearVelocity(owner)).y});
 	}
 	if (getEvent(InputDevice::RIGHT)) {
-		sDevice->playSound("walking", 1, 2);
+		if (soundTimer <= 0) {
+			soundTimer = SOUND_INCREMENT;
+			sDevice->playSound("walking", 0, 2);
+		}
 		if (pDevice->GetLinearVelocity(owner).x <= (MAX_VELOCITY * DT)) {
 			body->setLinearVelocity({ (pDevice->GetLinearVelocity(owner).x + (RUN_SPEED*DT)), (pDevice->GetLinearVelocity(owner)).y });
 		}
 		else {
 			body->setLinearVelocity({ (MAX_VELOCITY * DT), (pDevice->GetLinearVelocity(owner)).y });
 		}
-		//body->setLinearVelocity({ (pDevice->GetLinearVelocity(owner).x + (RUN_SPEED*DT)), (pDevice->GetLinearVelocity(owner)).y });
 	}
 
 	return nullptr; //This object never creates an object.

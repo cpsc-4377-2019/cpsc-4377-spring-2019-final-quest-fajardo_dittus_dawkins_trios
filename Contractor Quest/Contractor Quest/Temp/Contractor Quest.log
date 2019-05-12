@@ -22,9 +22,12 @@
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Third Party\SDL2_mixer\lib\x86\SDL2_mixer.dll
           9 file(s) copied.
   Engine.cpp
-d:\githubssd\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\contractor quest\contractor quest\source\engine.cpp(77): warning C4018: '<': signed/unsigned mismatch
+d:\githubssd\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\contractor quest\contractor quest\source\engine.cpp(79): warning C4018: '<': signed/unsigned mismatch
+  Library.cpp
+d:\githubssd\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\contractor quest\contractor quest\source\library.cpp(42): warning C4150: deletion of pointer to incomplete type '_Mix_Music'; no destructor called
+  d:\githubssd\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\contractor quest\contractor quest\third party\sdl2_mixer\include\sdl_mixer.h(143): note: see declaration of '_Mix_Music'
+  Generating Code...
   Contractor Quest.vcxproj -> D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Contractor Quest.exe
-  D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\walking.ogg -> D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\walking.ogg
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Config\config.xml -> D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Config\config.xml
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Config\config2.xml -> D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Config\config2.xml
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\Block.png -> D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\Block.png
@@ -45,7 +48,7 @@ d:\githubssd\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\cont
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Images\Tree.png -> D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Images\Tree.png
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Sounds\background.ogg -> D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Sounds\background.ogg
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Sounds\walking.ogg -> D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Sounds\walking.ogg
-  21 File(s) copied
+  20 File(s) copied
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libFLAC-8.dll
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libfreetype-6.dll
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\libjpeg-9.dll

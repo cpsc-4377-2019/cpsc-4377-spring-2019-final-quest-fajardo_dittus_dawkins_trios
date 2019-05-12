@@ -72,7 +72,9 @@ Engine::~Engine() {
 
 //Resets view and empties object vector.
 void Engine::reset() {
+
 	view->update(0.0f);
+	graphicsDevice->changeBackground(100, 100, 100, 255);	//FIXME: abstract this if time allows
 
 	for (int i = 0; i < objects.size(); i++) {
 		delete objects.at(i);

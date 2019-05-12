@@ -64,6 +64,8 @@ public:
 	TTF_Font* font{ nullptr };
 	SDL_Color color{ 0,0,0,255 };
 
+	void changeBackground(Uint8, Uint8, Uint8, Uint8);
+
 private:
 	EngineFloat Center(EngineFloat centerOn, EngineFloat width);
 	//You need these!!! Mr. Orme.
@@ -78,8 +80,6 @@ private:
 	};
 
 	std::vector<overlay> overlays;*/
-
-
 
 };
 

@@ -16,6 +16,7 @@ Library::Library(GraphicsDevice* graphicsDevice)
 	artLibrary["RabidRacoon"] = new Texture(graphicsDevice, "./Assets/Images/RabidRacoon.png");
 	artLibrary["Racoon"] = new Texture(graphicsDevice, "./Assets/Images/Racoon.png");
 	artLibrary["Rock"] = new Texture(graphicsDevice, "./Assets/Images/Rock.png");
+	artLibrary["Tree"] = new Texture(graphicsDevice, "./Assets/Images/Tree.png");
 
 	soundEffectLibrary["walking"] = Mix_LoadWAV("./Assets/Sounds/walking.ogg");
 
@@ -36,6 +37,7 @@ Library::~Library() {
 	delete artLibrary.at("RabidRacoon");
 	delete artLibrary.at("Racoon");
 	delete artLibrary.at("Rock");
+	delete artLibrary.at("Tree");
 
 	delete musicLibrary.at("background");
 	delete soundEffectLibrary.at("walking");

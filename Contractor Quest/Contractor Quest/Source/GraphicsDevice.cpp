@@ -323,3 +323,8 @@ EngineFloat GraphicsDevice::Center(EngineFloat centerOn, EngineFloat width)
 
 	return point;
 }
+
+void GraphicsDevice::changeBackground(Uint8 r, Uint8 g, Uint8 b, Uint8 a)
+{
+	SDL_SetRenderDrawColor(renderer, r, g, b, a);
+}

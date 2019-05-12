@@ -28,7 +28,9 @@ class InputComponent: public Component {
 		SoundDevice* sDevice;
 
 		int jumpCooldown;
+		int soundTimer;
 		const int COOLDOWN_TIME = 100;	//FIXME: TEMPORARY! delete these if another solution is used
+		const int SOUND_INCREMENT = 50;
 
 		const float RUN_SPEED = 900.0f;
 		const float MAX_VELOCITY = 32000.0f;
