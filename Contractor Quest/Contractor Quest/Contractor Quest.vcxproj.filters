@@ -63,20 +63,11 @@
     <ClInclude Include="Source\InputComponent.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
-    <ClInclude Include="Source\RabidRacoonBehaviorComponent.h">
-      <Filter>Header Files\Components</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\RacoonBehaviorComponent.h">
-      <Filter>Header Files\Components</Filter>
-    </ClInclude>
     <ClInclude Include="Source\SpriteComponent.h">
       <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Source\Initializers.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\CrazyPersonBehaviorComponent.h">
-      <Filter>Header Files\Components</Filter>
     </ClInclude>
     <ClInclude Include="Source\TimedLifeComponent.h">
       <Filter>Header Files\Components</Filter>
@@ -108,6 +99,15 @@
     <ClInclude Include="Source\View.h">
       <Filter>Header Files\Devices</Filter>
     </ClInclude>
+    <ClInclude Include="Source\SentryBehaviorComponent.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\SeekPlayerBehaviorComponent.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\WanderBehaviorComponent.h">
+      <Filter>Header Files\Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Engine.cpp">
@@ -134,16 +134,7 @@
     <ClCompile Include="Source\InputComponent.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
-    <ClCompile Include="Source\RabidRacoonBehaviorComponent.cpp">
-      <Filter>Source Files\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\RacoonBehaviorComponent.cpp">
-      <Filter>Source Files\Components</Filter>
-    </ClCompile>
     <ClCompile Include="Source\SpriteComponent.cpp">
-      <Filter>Source Files\Components</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\CrazyPersonBehaviorComponent.cpp">
       <Filter>Source Files\Components</Filter>
     </ClCompile>
     <ClCompile Include="Source\TimedLifeComponent.cpp">
@@ -175,6 +166,15 @@
     </ClCompile>
     <ClCompile Include="Source\View.cpp">
       <Filter>Source Files\Devices</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SentryBehaviorComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\SeekPlayerBehaviorComponent.cpp">
+      <Filter>Source Files\Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\WanderBehaviorComponent.cpp">
+      <Filter>Source Files\Components</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

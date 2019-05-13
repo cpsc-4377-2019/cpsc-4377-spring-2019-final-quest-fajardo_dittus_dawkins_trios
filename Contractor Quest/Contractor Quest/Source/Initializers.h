@@ -70,9 +70,9 @@ struct ObjectFactoryPresets
 	bool bodyCompNeeded = false;
 	bool spriteCompNeeded = false;
 	bool inputCompNeeded = false;
-	bool racoonBehaviorCompNeeded = false;
-	bool rabidracoonBehaviorCompNeeded = false;
-	bool crazyPersonBehaviorCompNeeded = false;
+	bool wanderBehaviorCompNeeded = false;
+	bool seekPlayerBehaviorCompNeeded = false;
+	bool sentryBehaviorCompNeeded = false;
 	bool timedLifeCompNeeded = false;
 	
 };

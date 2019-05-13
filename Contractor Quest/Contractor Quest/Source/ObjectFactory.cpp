@@ -7,9 +7,9 @@
 #include "BodyComponent.h"
 #include "SoundDevice.h"
 #include "InputComponent.h"
-#include "RabidRacoonBehaviorComponent.h"
-#include "RacoonBehaviorComponent.h"
-#include "CrazyPersonBehaviorComponent.h"
+#include "SeekPlayerBehaviorComponent.h"
+#include "WanderBehaviorComponent.h"
+#include "SentryBehaviorComponent.h"
 #include "TimedLifeComponent.h"
 #include "tinyxml2.h"
 
@@ -89,18 +89,18 @@ Object* ObjectFactory::create(tinyxml2::XMLElement* objectElement, GraphicsDevic
 			presets.inputDevice = inputDevice;
 			newObject->addComponent(new InputComponent(newObject, presets));
 		}
-		else if (componentName == "RacoonBehaviorComponent") {
-			newObject->addComponent(new RacoonBehaviorComponent(newObject, presets));
+		else if (componentName == "WanderBehaviorComponent") {
+			newObject->addComponent(new WanderBehaviorComponent(newObject, presets));
 		}
-		else if (componentName == "RabidRacoonBehaviorComponent") {
-			newObject->addComponent(new RabidRacoonBehaviorComponent(newObject, presets));
+		else if (componentName == "SeekPlayerBehaviorComponent") {
+			newObject->addComponent(new SeekPlayerBehaviorComponent(newObject, presets));
 		}
 		else if (componentName == "TimedLifeComponent") {
 			newObject->addComponent(new TimedLifeComponent(newObject, presets));
 		}
-		else if (componentName == "CrazyPersonBehaviorComponent") {
+		else if (componentName == "SentryBehaviorComponent") {
 			presets.objectFactory = this;
-			newObject->addComponent(new CrazyPersonBehaviorComponent(newObject, presets));
+			newObject->addComponent(new SentryBehaviorComponent(newObject, presets));
 		}
 	}
 
@@ -130,18 +130,18 @@ Object* ObjectFactory::create(ObjectFactoryPresets presets) {
 	if (presets.inputCompNeeded) {
 		newObject->addComponent(new InputComponent(newObject, presets));
 	}
-	if (presets.racoonBehaviorCompNeeded) {
-		newObject->addComponent(new RacoonBehaviorComponent(newObject, presets));
+	if (presets.wanderBehaviorCompNeeded) {
+		newObject->addComponent(new WanderBehaviorComponent(newObject, presets));
 	}
-	if (presets.rabidracoonBehaviorCompNeeded) {
-		newObject->addComponent(new RabidRacoonBehaviorComponent(newObject, presets));
+	if (presets.seekPlayerBehaviorCompNeeded) {
+		newObject->addComponent(new SeekPlayerBehaviorComponent(newObject, presets));
 	}
 	if (presets.timedLifeCompNeeded) {
 		newObject->addComponent(new TimedLifeComponent(newObject, presets));
 	}
-	if (presets.crazyPersonBehaviorCompNeeded) {
+	if (presets.sentryBehaviorCompNeeded) {
 		presets.objectFactory = this;
-		newObject->addComponent(new CrazyPersonBehaviorComponent(newObject, presets));
+		newObject->addComponent(new SentryBehaviorComponent(newObject, presets));
 	}
 	if (presets.timedLifeCompNeeded) {
 		newObject->addComponent(new TimedLifeComponent(newObject, presets)); //FIXME: Check that this works properly after branches are merged.

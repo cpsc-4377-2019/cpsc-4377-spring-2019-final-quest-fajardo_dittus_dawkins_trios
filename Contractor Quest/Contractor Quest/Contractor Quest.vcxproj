@@ -22,7 +22,7 @@
     <ClInclude Include="Source\BodyComponent.h" />
     <ClInclude Include="Source\Component.h" />
     <ClInclude Include="Source\ContactListener.h" />
-    <ClInclude Include="Source\CrazyPersonBehaviorComponent.h" />
+    <ClInclude Include="Source\SentryBehaviorComponent.h" />
     <ClInclude Include="Source\Definitions.h" />
     <ClInclude Include="Source\Engine.h" />
     <ClInclude Include="Source\GraphicsDevice.h" />
@@ -33,8 +33,8 @@
     <ClInclude Include="Source\Object.h" />
     <ClInclude Include="Source\ObjectFactory.h" />
     <ClInclude Include="Source\PhysicsDevice.h" />
-    <ClInclude Include="Source\RabidRacoonBehaviorComponent.h" />
-    <ClInclude Include="Source\RacoonBehaviorComponent.h" />
+    <ClInclude Include="Source\SeekPlayerBehaviorComponent.h" />
+    <ClInclude Include="Source\WanderBehaviorComponent.h" />
     <ClInclude Include="Source\SoundDevice.h" />
     <ClInclude Include="Source\SpriteComponent.h" />
     <ClInclude Include="Source\Texture.h" />
@@ -47,7 +47,7 @@
     <ClCompile Include="Source\BodyComponent.cpp" />
     <ClCompile Include="Source\Component.cpp" />
     <ClCompile Include="Source\ContactListener.cpp" />
-    <ClCompile Include="Source\CrazyPersonBehaviorComponent.cpp" />
+    <ClCompile Include="Source\SentryBehaviorComponent.cpp" />
     <ClCompile Include="Source\Engine.cpp" />
     <ClCompile Include="Source\GraphicsDevice.cpp" />
     <ClCompile Include="Source\InputComponent.cpp" />
@@ -56,8 +56,8 @@
     <ClCompile Include="Source\Object.cpp" />
     <ClCompile Include="Source\ObjectFactory.cpp" />
     <ClCompile Include="Source\PhysicsDevice.cpp" />
-    <ClCompile Include="Source\RabidRacoonBehaviorComponent.cpp" />
-    <ClCompile Include="Source\RacoonBehaviorComponent.cpp" />
+    <ClCompile Include="Source\SeekPlayerBehaviorComponent.cpp" />
+    <ClCompile Include="Source\WanderBehaviorComponent.cpp" />
     <ClCompile Include="Source\SoundDevice.cpp" />
     <ClCompile Include="Source\Source.cpp" />
     <ClCompile Include="Source\SpriteComponent.cpp" />
