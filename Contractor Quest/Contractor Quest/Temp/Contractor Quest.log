@@ -23,6 +23,11 @@
           9 file(s) copied.
   Engine.cpp
 d:\githubssd\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\contractor quest\contractor quest\source\engine.cpp(80): warning C4018: '<': signed/unsigned mismatch
+  InputComponent.cpp
+  PhysicsDevice.cpp
+  SeekPlayerBehaviorComponent.cpp
+d:\githubssd\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\contractor quest\contractor quest\source\seekplayerbehaviorcomponent.cpp(30): warning C4018: '<': signed/unsigned mismatch
+  Generating Code...
   Contractor Quest.vcxproj -> D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Contractor Quest.exe
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Config\config.xml -> D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Config\config.xml
   D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Assets\Config\config2.xml -> D:\GithubSSD\cpsc-4377-spring-2019-final-quest-fajardo_dittus_dawkins_trios\Contractor Quest\Contractor Quest\Game\Assets\Config\config2.xml

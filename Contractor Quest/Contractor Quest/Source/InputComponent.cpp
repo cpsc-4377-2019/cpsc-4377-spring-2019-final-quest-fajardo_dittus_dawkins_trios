@@ -15,6 +15,7 @@ InputComponent::InputComponent(Object * owner, ObjectFactoryPresets presets) : C
 }
 
 InputComponent::~InputComponent() {
+
 }
 
 Object* InputComponent::update(vector<Object*> objects) {

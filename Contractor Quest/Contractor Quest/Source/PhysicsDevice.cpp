@@ -216,8 +216,13 @@ bool PhysicsDevice::createRevolvingJoint(
 bool PhysicsDevice::deleteBody(Object * object)
 {
 	b2Body* body = findBody(object);
-	world->DestroyBody(body);
-	return true;
+	if (body == nullptr) {
+		return false;
+	}
+	else {
+		world->DestroyBody(body);
+		return true;
+	}
 }
 
 bool PhysicsDevice::SetTransform(Object * object, Position position, EngineFloat angle)
