@@ -13,7 +13,7 @@
 		<Object elementType="Object" type="CrazyPerson">
 			<Component name="Body" posX="700.0f" posY="200.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
 			<Component name="Sprite" path = "./Assets/Images/CrazyPerson.png"/>
-			<Component name="CrazyPersonBehaviorComponent"/>
+			<Component name="SentryBehaviorComponent"/>
 		</Object>
 		<Object elementType="Object" type="CrazyPersonArm">
 			<Component name="Body" posX="660.0f" posY="195.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
@@ -30,13 +30,13 @@
 	<Object elementType="Object" type="Racoon">
 		<Component name="Body" posX="1000.0f" posY="608.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
 		<Component name= "Sprite" path = "./Assets/Images/Racoon.png"/>
-		<Component name= "RacoonBehaviorComponent"/>
+		<Component name= "WanderBehaviorComponent"/>
 	</Object>
   
 	<Object elementType="Object" type="RabidRacoon">
 		<Component name="Body" posX="700.0f" posY="608.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
 		<Component name= "Sprite" path = "./Assets/Images/RabidRacoon.png"/>
-		<Component name = "RabidRacoonBehaviorComponent"/>
+		<Component name = "SeekPlayerBehaviorComponent"/>
 	</Object>
 
   <Object elementType="Object" type="Building">
@@ -65,10 +65,6 @@
   <!-- Limit level to 4 screen lengths for now -->
   
   <!-- Bottom Blocks -->
-  <Object elementType="Object" type="SteelBeam">
-    <Component name= "Body" posX="500.0f" posY="600.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/SteelBeam.png"/>
-  </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="0.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
     <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
@@ -253,6 +249,7 @@
     <Component name= "Body" posX="1490.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
     <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
   </Object>
+  
   <!-- PIT
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1525.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
@@ -612,58 +609,26 @@
   
 
   <!-- Jumping Platforms -->
-  <Object elementType="Object" type="Concrete">
-    <Component name= "Body" posX="1600.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
-  </Object>
-  <Object elementType="Object" type="Concrete">
+  <Object elementType="Object" type="SteelBeam">
     <Component name= "Body" posX="1635.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name= "Sprite" path = "./Assets/Images/SteelBeam.png"/>
   </Object>
-  <Object elementType="Object" type="Concrete">
-    <Component name= "Body" posX="1670.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+
+  <Object elementType="Object" type="SteelBeam">
+    <Component name= "Body" posX="2035.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/SteelBeam.png"/>
+  </Object>
+
+  <Object elementType="Object" type="SteelBeam">
+    <Component name= "Body" posX="2435.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/SteelBeam.png"/>
+  </Object>
+
+  <Object elementType="Object" type="SteelBeam">
+    <Component name= "Body" posX="2835.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/SteelBeam.png"/>
   </Object>
   
-  <Object elementType="Object" type="Concrete">
-    <Component name= "Body" posX="2000.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
-  </Object>
-  <Object elementType="Object" type="Concrete">
-    <Component name= "Body" posX="2035.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
-  </Object>
-  <Object elementType="Object" type="Concrete">
-    <Component name= "Body" posX="2070.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
-  </Object>
-
-  <Object elementType="Object" type="Concrete">
-    <Component name= "Body" posX="2400.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
-  </Object>
-  <Object elementType="Object" type="Concrete">
-    <Component name= "Body" posX="2435.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
-  </Object>
-  <Object elementType="Object" type="Concrete">
-    <Component name= "Body" posX="2470.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
-  </Object>
-
-  <Object elementType="Object" type="Concrete">
-    <Component name= "Body" posX="2800.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
-  </Object>
-  <Object elementType="Object" type="Concrete">
-    <Component name= "Body" posX="2835.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
-  </Object>
-  <Object elementType="Object" type="Concrete">
-    <Component name= "Body" posX="2870.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
-  </Object>
-
   
   
   <!-- Other Obstacles -->
@@ -690,13 +655,13 @@
   <Object elementType="Object" type="Racoon">
     <Component name="Body" posX="3500.0f" posY="608.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
     <Component name= "Sprite" path = "./Assets/Images/Racoon.png"/>
-    <Component name= "RacoonBehaviorComponent"/>
+    <Component name= "WanderBehaviorComponent"/>
   </Object>
   
   <Object elementType="Object" type="RabidRacoon">
     <Component name="Body" posX="1200.0f" posY="608.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
     <Component name= "Sprite" path = "./Assets/Images/RabidRacoon.png"/>
-    <Component name = "RabidRacoonBehaviorComponent"/>
+    <Component name = "SeekPlayerBehaviorComponent"/>
   </Object>
 
   
@@ -704,7 +669,7 @@
     <Object elementType="Object" type="CrazyPerson">
       <Component name="Body" posX="700.0f" posY="200.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
       <Component name="Sprite" path = "./Assets/Images/CrazyPerson.png"/>
-      <Component name="CrazyPersonBehaviorComponent"/>
+      <Component name="SentryBehaviorComponent"/>
     </Object>
     <Object elementType="Object" type="CrazyPersonArm">
       <Component name="Body" posX="660.0f" posY="195.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
@@ -716,7 +681,7 @@
     <Object elementType="Object" type="CrazyPerson">
       <Component name="Body" posX="3435.0f" posY="55.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
       <Component name="Sprite" path = "./Assets/Images/CrazyPerson.png"/>
-      <Component name="CrazyPersonBehaviorComponent"/>
+      <Component name="SentryBehaviorComponent"/>
     </Object>
     <Object elementType="Object" type="CrazyPersonArm">
       <Component name="Body" posX="3395.0f" posY="50.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>

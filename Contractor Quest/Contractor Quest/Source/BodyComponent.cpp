@@ -29,6 +29,7 @@ bool BodyComponent::initialize(ObjectFactoryPresets presets) {
 
 	position = getPosition();
 	angle = getAngle();
+	isGrounded = false;
 
 	return true;
 }

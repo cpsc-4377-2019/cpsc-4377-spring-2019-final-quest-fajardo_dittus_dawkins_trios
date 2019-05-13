@@ -6,6 +6,16 @@
 #include "PhysicsDevice.h"
 #include <string>
 
+void ContactListener::EndContact(b2Contact* contact) {
+	//If an object is not in contact with anything, set isGrounded to false.
+	if (!(contact->IsTouching())) {
+		b2Body* pBody = contact->GetFixtureA()->GetBody();
+		Object* airbornObject = static_cast<Object*>(pBody->GetUserData());
+
+		airbornObject->GetComponent<BodyComponent>()->setIsGrounded(false);
+	}
+}
+
 //Define how objects should interact here; write/re-write code as necessary
 void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold) {
 
@@ -14,19 +24,6 @@ void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold
 
 	Object* objectA = static_cast<Object*>(bodyA->GetUserData());
 	Object* objectB = static_cast<Object*>(bodyB->GetUserData());
-
-	//FIXME: Clean this up!
-	//if (bodyA->GetType() == b2_dynamicBody && bodyB->GetType() == b2_staticBody) {
-	//	//If objectA is above or under objectB, ignore contact
-	//	//contact->SetEnabled(false);
-	//}
-	//else if (bodyA->GetType() == b2_staticBody && bodyB->GetType() == b2_dynamicBody) {
-	//	//Vice-versa
-	//}
-	//Ensure that dynamic objects dont randomly stop when moving over static objects
-	/*if (isAboveOrBelow(objectA, objectB) &&
-		((bodyA->GetType() == b2_dynamicBody && bodyB->GetType() == b2_staticBody) ||
-		(bodyA->GetType() == b2_staticBody && bodyB->GetType() == b2_dynamicBody))) contact->SetEnabled(false);*/
 
 	//If the player collides with the building or lunchbox, destroy the object (ending the level)
 	if (objectA->getType() == "Player" && (objectB->getType() == "Building" || objectB->getType() == "Lunchbox")) objectB->setIsDead(true);
@@ -110,6 +107,25 @@ void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold
 		}
 	}
 
+	//Sets mob's isGrounded based on whether they are in contact with a surface.
+	//Check is based on whether a dynamic object is in contact with a kinetic or static object.
+	//This also allows for wall jumps.
+	if (mobSurfaceContact(bodyA, bodyB)) {
+		if (bodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
+			objectA->GetComponent<BodyComponent>()->setIsGrounded(true);
+		}
+		else {
+			objectB->GetComponent<BodyComponent>()->setIsGrounded(true);
+		}
+	}
+	else {
+		if (bodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
+			objectA->GetComponent<BodyComponent>()->setIsGrounded(false);
+		}
+		else if (bodyB->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
+			objectB->GetComponent<BodyComponent>()->setIsGrounded(false);
+		}
+	}
 }
 
 //Returns true if one object is the player and the other is an enemy mob, else return false.
@@ -163,4 +179,19 @@ bool ContactListener::isAboveOrBelow(Object * objectA, Object * objectB)
 		sdlBodyA->getPosY() > (sdlBodyB->getPosY() + spriteB->texture->getHeight())) shouldNotCollide = true;
 
 	return shouldNotCollide;
+}
+
+//Checks if a dynamic object has made contact with a kinematic or static object.
+bool ContactListener::mobSurfaceContact(b2Body* b2BodyA, b2Body* b2BodyB) {
+	if (b2BodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC &&
+		(b2BodyB->GetType() == GAME_BODY_TYPE::GAME_STATIC || b2BodyB->GetType() == GAME_BODY_TYPE::GAME_KINEMATIC)) {
+		return true;
+	}
+	else if ((b2BodyA->GetType() == GAME_BODY_TYPE::GAME_STATIC || b2BodyA->GetType() == GAME_BODY_TYPE::GAME_KINEMATIC) &&
+		b2BodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
+		return true;
+	}
+	else {
+		return false;
+	}
 }

@@ -32,6 +32,7 @@ class BodyComponent: public Component {
 		Position getVelocity();
 		int getState() { return state; }
 		GAME_BODY_TYPE getBodyType() { return bodyType; }
+		bool getIsGrounded() { return isGrounded; }
 
 		void setPosition(Position position);
 		void setPosX(EngineFloat x) { setPosition({ x, position.y }); }
@@ -41,6 +42,7 @@ class BodyComponent: public Component {
 		void setVelocity(Position velocity);
 		void setLinearImpulse(Position forceVec);
 		void setLinearVelocity(Position velocity);
+		void setIsGrounded(bool isGrounded) { this->isGrounded = isGrounded; }
 
 		PhysicsDevice* pDevice;
 
@@ -48,6 +50,7 @@ protected:
 	    Position position;
 		float angle;
 		int state;
+		bool isGrounded; //Used to determine if the object has a surface to jump off of.
 		GAME_BODY_TYPE bodyType;
 };
 

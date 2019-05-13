@@ -50,8 +50,6 @@ bool PhysicsDevice::CreateFixture(
 
 	bd->userData = object;
 
-	//FIXME:Add a clause for bullet body types here if projectiles have collision issues!
-
 	switch (bodyType) {
 	case GAME_STATIC:
 		bd->type = b2_staticBody;
@@ -64,7 +62,7 @@ bool PhysicsDevice::CreateFixture(
 		break;
 	}
 	bd->position.Set(RW2PW(position.x), RW2PW(position.y));
-	bd->angle = RW2PWAngle(angle);	//FIXME: this may need to be changed to RW2PW
+	bd->angle = RW2PWAngle(angle);
 
 	//Set body in world
 	b2Body* body = world->CreateBody(bd);
