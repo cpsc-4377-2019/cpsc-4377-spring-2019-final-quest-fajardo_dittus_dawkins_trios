@@ -144,7 +144,7 @@ Object* ObjectFactory::create(ObjectFactoryPresets presets) {
 		newObject->addComponent(new SentryBehaviorComponent(newObject, presets));
 	}
 	if (presets.timedLifeCompNeeded) {
-		newObject->addComponent(new TimedLifeComponent(newObject, presets)); //FIXME: Check that this works properly after branches are merged.
+		newObject->addComponent(new TimedLifeComponent(newObject, presets));
 	}
 
 	if (newObject->initialize(presets))

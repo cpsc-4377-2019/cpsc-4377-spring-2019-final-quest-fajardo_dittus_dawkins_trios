@@ -30,7 +30,7 @@ bool SentryBehaviorComponent::initialize(ObjectFactoryPresets presets) {
 Object* SentryBehaviorComponent::update(vector<Object*> objects) {
 
 	//Decrement timer
-	if (rockCooldown > 0) rockCooldown--;
+	if (rockTimer > 0) rockTimer--;
 
 	//Locate Player
 	Object* player = nullptr;
@@ -62,10 +62,10 @@ Object* SentryBehaviorComponent::update(vector<Object*> objects) {
 			}
 
 			//Set presets and create throwning rock if a long enough amount of time has passed since the last.
-			if (rockCooldown <= 0) {
+			if (rockTimer <= 0) {
 
 				//Reset timer
-				rockCooldown = 100;
+				rockTimer = ROCK_COOLDOWN;
 
 				SpriteComponent* ownSprite = owner->GetComponent<SpriteComponent>();
 
@@ -88,12 +88,12 @@ Object* SentryBehaviorComponent::update(vector<Object*> objects) {
 				presets.bodyInitializers.bodyShape = GAME_OBJECT_SHAPE::GAME_RECTANGLE;
 				if (ownBody->getState() == BodyComponent::STANDING_LEFT) {
 					presets.bodyInitializers.position.x = ownBody->getPosition().x - 5.0f;
-					presets.bodyInitializers.linearVelocity = { -500.0f, -20.0f }; //FIXME: The velocity values may need to be changed
+					presets.bodyInitializers.linearVelocity = { -500.0f, -20.0f };
 					presets.bodyInitializers.angularVelocity = -10.0f;
 				}
 				else if (ownBody->getState() == BodyComponent::STANDING_RIGHT) {
 					presets.bodyInitializers.position.x = ownBody->getPosition().x + ownSprite->texture->getWidth() + 5.0f;
-					presets.bodyInitializers.linearVelocity = { 500.0f, -20.0f }; //FIXME: The velocity values may need to be changed
+					presets.bodyInitializers.linearVelocity = { 500.0f, -20.0f };
 					presets.bodyInitializers.angularVelocity = 10.0f;
 				}
 

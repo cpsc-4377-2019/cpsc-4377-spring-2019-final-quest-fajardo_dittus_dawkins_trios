@@ -17,8 +17,9 @@ class SentryBehaviorComponent : public Component {
 		void start();
 		void finish();
 	private:
-		const float AGGRO_RADIUS = 750.0f;	//FIXME: may need to adjust
-		int rockCooldown = 0;	//Timer to determine when rocks can be thrown
+		const float AGGRO_RADIUS = 750.0f;
+		const int ROCK_COOLDOWN = 150;
+		int rockTimer = 0;	//Timer to determine when rocks can be thrown
 		ObjectFactory* objectFactory; //Used call create to create rocks.
 };
 

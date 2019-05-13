@@ -17,7 +17,7 @@ class WanderBehaviorComponent: public Component {
 		void start();
 		void finish();
 
-		const float RUN_SPEED = 100.0f; //FIXME: This value may need to be changed.
+		const float RUN_SPEED = 100.0f;
 
 	private:
 };
