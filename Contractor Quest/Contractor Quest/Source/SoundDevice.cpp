@@ -62,7 +62,7 @@ Mix_Music* SoundDevice::getMusic(string name) {
 
 }
 
-void SoundDevice::getLibrary(Library* library) {
+void SoundDevice::setLibrary(Library* library) {
 	this->library = library;
 }
 

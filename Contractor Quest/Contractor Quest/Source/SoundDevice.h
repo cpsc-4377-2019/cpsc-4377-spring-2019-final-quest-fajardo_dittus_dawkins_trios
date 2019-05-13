@@ -19,7 +19,7 @@ public:
 	Mix_Chunk* getSoundEffect(string name);
 	Mix_Music* getMusic(string name);
 
-	void getLibrary(Library* library);
+	void setLibrary(Library* library);
 
 	int updateSound(int minVal, int maxVal, int curValue, int increment);
 	int updateSoundDirection(int minVal, int maxVal, int curValue, int increment);

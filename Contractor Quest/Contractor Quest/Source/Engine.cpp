@@ -17,7 +17,7 @@ Engine::Engine()
 	graphicsDevice = new GraphicsDevice(1920, 1080, true);
 	soundDevice = new SoundDevice();
 	objectLibrary = new Library(graphicsDevice);
-	soundDevice->getLibrary(objectLibrary);
+	soundDevice->setLibrary(objectLibrary);
 	factory = new ObjectFactory(graphicsDevice, objectLibrary);
 	timer = new Timer;
 	
@@ -38,7 +38,7 @@ Engine::Engine(vector<string> levelPaths)
 	graphicsDevice = new GraphicsDevice(1024, 768, true);
 	soundDevice = new SoundDevice();
 	objectLibrary = new Library(graphicsDevice);
-	soundDevice->getLibrary(objectLibrary);
+	soundDevice->setLibrary(objectLibrary);
 	factory = new ObjectFactory(graphicsDevice, objectLibrary);
 	inputDevice = new InputDevice(soundDevice);
 
@@ -257,6 +257,5 @@ void Engine::createJointedObject(tinyxml2::XMLElement * jointElement, GraphicsDe
 	Object* object2 = factory->create(objectElement, graphicsDevice, objectLibrary, inputDevice, pDevice, sDevice);
 	objects.push_back(object2);
 
-	//Call createDistanceJoint(Object1*, Object2*, EngineFloat maxDistance, Position anchor1, Position anchor2)
 	pDevice->createDistanceJoint(object1, object2, jointPresets.JointLimit, jointPresets.AnchorA, jointPresets.AnchorB, jointPresets.collide);
 }

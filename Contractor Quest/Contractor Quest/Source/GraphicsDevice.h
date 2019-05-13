@@ -21,7 +21,6 @@ public:
 	~GraphicsDevice();
 
 	//startup and Shutdown
-	//bool initialize(bool);
 	bool ShutDown();
 
 	//Parameters
@@ -36,26 +35,11 @@ public:
 	
 	//Rendering functions
 	void Begin();
-	//void draw();
 	void Present();
-
-	//void drawFilledCircle(Position position, EngineInt radius, RGBA RGBA);
-	//bool drawBox(Position topLeft, Position bottomRight, RGBA RGBA);
-
-	//void drawOverlay
-	//(
-	//	//round corner box that contains overlay
-	//	Position topLeft, Position bottomRight, RGBA boxBackgroundColor, RGBA boxBorderColor,
-	//	//any objects drawn in stated box
-	//	//at given position
-	//	std::map<Texture*, Position> objects
-
-	//);
 
 	//getters
 	SDL_Renderer* getRenderer();
 
-	//SDL_Window* getWindow();
 	View* getView();
 
 	//setters
@@ -68,19 +52,6 @@ public:
 
 private:
 	EngineFloat Center(EngineFloat centerOn, EngineFloat width);
-	//You need these!!! Mr. Orme.
-	
-	/*struct overlay
-	{
-		Position topLeft{ 0 };
-		Position bottomRight{ 0 };
-		RGBA boxBackgroundColor{ 0,0,0,0 };
-		RGBA boxBorderColor{ 0,0,0,0 };
-		std::map<Texture*, Position> objects;
-	};
-
-	std::vector<overlay> overlays;*/
-
 };
 
 #endif
