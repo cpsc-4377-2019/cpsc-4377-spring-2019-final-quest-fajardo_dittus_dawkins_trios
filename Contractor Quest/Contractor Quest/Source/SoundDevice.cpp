@@ -45,7 +45,7 @@ bool SoundDevice::playSound(string sound, int numLoops) {
 //this is if we need to use a specific channel
 bool SoundDevice::playSound(string sound, int numLoops, int channelID) {
 	
-	//Mix_SetPosition(channelID, (Sint16)soundDirection, (Uint8)soundDistance);
+	Mix_SetPosition(channelID, (Sint16)soundDirection, (Uint8)soundDistance);
 	Mix_PlayChannel(channelID, getSoundEffect(sound), numLoops);
 	return true;
 }

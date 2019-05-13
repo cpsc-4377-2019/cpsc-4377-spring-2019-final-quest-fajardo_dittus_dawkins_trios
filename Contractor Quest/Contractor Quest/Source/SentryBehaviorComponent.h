@@ -3,6 +3,7 @@
 
 #include "Component.h"
 
+class SoundDevice;
 class Texture;
 class ObjectFactory;
 
@@ -21,6 +22,7 @@ class SentryBehaviorComponent : public Component {
 		const int ROCK_COOLDOWN = 150;
 		int rockTimer = 0;	//Timer to determine when rocks can be thrown
 		ObjectFactory* objectFactory; //Used call create to create rocks.
+		SoundDevice* sDevice;
 };
 
 #endif

@@ -1,10 +1,8 @@
 #include<iostream>
 #include "SDL2_gfxPrimitives.h"
-//#include "SDL_mixer.h" //FIXME: will be uncommented when we get to audio of game
 #include "GraphicsDevice.h"
 #include "View.h" 
 #include "Texture.h"
-//#include "SoundDevice.h" //FIXME: will be included when we create and start working on sound effects/music
 
 
 

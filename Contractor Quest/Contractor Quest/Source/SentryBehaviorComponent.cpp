@@ -3,6 +3,7 @@
 #include <random>
 #include "Object.h"
 #include "BodyComponent.h"
+#include "SoundDevice.h"
 #include "SpriteComponent.h"
 #include "Texture.h"
 #include "Definitions.h"
@@ -17,7 +18,9 @@ SentryBehaviorComponent::~SentryBehaviorComponent() {
 }
 
 bool SentryBehaviorComponent::initialize(ObjectFactoryPresets presets) {
+
 	objectFactory = presets.objectFactory;
+	sDevice = presets.sDevice;
 
 	if (objectFactory != nullptr) {
 		return true;
@@ -99,6 +102,7 @@ Object* SentryBehaviorComponent::update(vector<Object*> objects) {
 
 				//Create rock.
 				rock = objectFactory->create(presets);
+				sDevice->playSound("throwing", 0, 1);
 			}
 		}
 		else {
