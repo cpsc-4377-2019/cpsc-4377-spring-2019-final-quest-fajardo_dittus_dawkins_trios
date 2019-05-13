@@ -65,6 +65,10 @@
   <!-- Limit level to 4 screen lengths for now -->
   
   <!-- Bottom Blocks -->
+  <Object elementType="Object" type="SteelBeam">
+    <Component name= "Body" posX="0.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
+    <Component name= "Sprite" path = "./Assets/Images/SteelBeam.png"/>
+  </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="0.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
     <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
