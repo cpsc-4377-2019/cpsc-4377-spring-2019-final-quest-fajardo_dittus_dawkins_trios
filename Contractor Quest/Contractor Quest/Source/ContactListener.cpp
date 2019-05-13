@@ -107,25 +107,8 @@ void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold
 		}
 	}
 
-	//Sets mob's isGrounded based on whether they are in contact with a surface.
-	//Check is based on whether a dynamic object is in contact with a kinetic or static object.
-	//This also allows for wall jumps.
-	if (mobSurfaceContact(bodyA, bodyB)) {
-		if (bodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
-			objectA->GetComponent<BodyComponent>()->setIsGrounded(true);
-		}
-		else {
-			objectB->GetComponent<BodyComponent>()->setIsGrounded(true);
-		}
-	}
-	else {
-		if (bodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
-			objectA->GetComponent<BodyComponent>()->setIsGrounded(false);
-		}
-		else if (bodyB->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
-			objectB->GetComponent<BodyComponent>()->setIsGrounded(false);
-		}
-	}
+	//Sets isGrounded based on whether a dynamic object is in contact with an object.
+	handleMobSurfaceContact(bodyA, objectA, bodyB, objectB);
 }
 
 //Returns true if one object is the player and the other is an enemy mob, else return false.
@@ -181,17 +164,13 @@ bool ContactListener::isAboveOrBelow(Object * objectA, Object * objectB)
 	return shouldNotCollide;
 }
 
-//Checks if a dynamic object has made contact with a kinematic or static object.
-bool ContactListener::mobSurfaceContact(b2Body* b2BodyA, b2Body* b2BodyB) {
-	if (b2BodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC &&
-		(b2BodyB->GetType() == GAME_BODY_TYPE::GAME_STATIC || b2BodyB->GetType() == GAME_BODY_TYPE::GAME_KINEMATIC)) {
-		return true;
+//Checks if a dynamic object has made contact with an object.  If so, it is set to be grounded.
+//This is used to limit jumping and allows for wall jumps.
+void ContactListener::handleMobSurfaceContact(b2Body* b2BodyA, Object* objectA, b2Body* b2BodyB, Object* objectB) {
+	if (b2BodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
+		objectA->GetComponent<BodyComponent>()->setIsGrounded(true);
 	}
-	else if ((b2BodyA->GetType() == GAME_BODY_TYPE::GAME_STATIC || b2BodyA->GetType() == GAME_BODY_TYPE::GAME_KINEMATIC) &&
-		b2BodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
-		return true;
-	}
-	else {
-		return false;
+	if (b2BodyB->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
+		objectB->GetComponent<BodyComponent>()->setIsGrounded(true);
 	}
 }

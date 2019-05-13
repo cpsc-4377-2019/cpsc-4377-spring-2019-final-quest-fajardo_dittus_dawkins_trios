@@ -74,7 +74,6 @@ Engine::~Engine() {
 void Engine::reset() {
 
 	view->update(0.0f);
-	graphicsDevice->changeBackground(100, 100, 100, 255);	//FIXME: abstract this if time allows
 
 	for (int i = 0; i < objects.size(); i++) {
 		delete objects.at(i);
@@ -94,9 +93,17 @@ void Engine::loadLevel(string levelPath) {
 	tinyxml2::XMLElement* root = doc.RootElement();
 	tinyxml2::XMLElement* element = root->FirstChildElement();
 
+	int r = 0, g = 0, b = 0, a = 0 ; //Values used for renders background.
 	while (element) {
 		elementType = element->Attribute("elementType");
-		if (elementType == "Joint") {
+		if (elementType == "Background") {
+			element->QueryIntAttribute("r", &r);
+			element->QueryIntAttribute("g", &g);
+			element->QueryIntAttribute("b", &b);
+			element->QueryIntAttribute("a", &a);
+			graphicsDevice->changeBackground(r, g, b, a);
+		}
+		else if (elementType == "Joint") {
 			createJointedObject(element, graphicsDevice, objectLibrary, inputDevice, pDevice, soundDevice);
 		}
 		else {

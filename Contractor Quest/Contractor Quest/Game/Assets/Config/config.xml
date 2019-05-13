@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Level>
 
+  <Background elementType="Background" r="135" g="206" b="235" a="255"></Background>
+
   <!--Not in current implementation
 	<Object elementType="Object" type="BreakableBlock">
 		<Component name="Body" posX="0.0f" posY="0.0f" angle="0.0f" state="0"/>

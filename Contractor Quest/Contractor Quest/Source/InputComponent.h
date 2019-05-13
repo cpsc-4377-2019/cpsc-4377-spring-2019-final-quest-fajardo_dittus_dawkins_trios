@@ -29,7 +29,7 @@ class InputComponent: public Component {
 
 		int jumpCooldown;
 		int soundTimer;
-		const int COOLDOWN_TIME = 100;	//FIXME: TEMPORARY! delete these if another solution is used
+		const int COOLDOWN_TIME = 50;	//FIXME: TEMPORARY! delete these if another solution is used
 		const int SOUND_INCREMENT = 50;
 
 		const float RUN_SPEED = 900.0f;

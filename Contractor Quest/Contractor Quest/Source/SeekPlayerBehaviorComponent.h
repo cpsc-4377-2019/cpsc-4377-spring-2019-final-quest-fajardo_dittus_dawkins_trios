@@ -20,7 +20,7 @@ class SeekPlayerBehaviorComponent: public Component {
 		void finish();
 
 		const float DETECTION_RANGE = 10.0f;
-		const int COOLDOWN_TIME = 100;
+		const int COOLDOWN_TIME = 50;
 		const float RUN_SPEED = 100.0f;
 		const float JUMP_HEIGHT = 700.0f;
 

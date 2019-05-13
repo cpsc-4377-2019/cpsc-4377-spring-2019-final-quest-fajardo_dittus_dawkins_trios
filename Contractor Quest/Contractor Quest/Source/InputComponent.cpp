@@ -21,11 +21,14 @@ Object* InputComponent::update(vector<Object*> objects) {
 
 	if (jumpCooldown > 0) jumpCooldown--;
 	if (soundTimer > 0) soundTimer--;
-	
+
 	BodyComponent* body = owner->GetComponent<BodyComponent>();
 	if (getEvent(InputDevice::UP) && jumpCooldown <= 0) {
-		jumpCooldown = COOLDOWN_TIME;
-		body->setLinearImpulse({0.0f, -JUMP_HEIGHT});
+
+		if (body->getIsGrounded()) {
+			jumpCooldown = COOLDOWN_TIME;
+			body->setLinearImpulse({ 0.0f, -JUMP_HEIGHT });
+		}
 	}
 	if (getEvent(InputDevice::DOWN)) {
 		body->setLinearImpulse({ 0.0f, FAST_FALL_SPEED });

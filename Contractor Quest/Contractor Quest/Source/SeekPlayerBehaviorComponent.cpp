@@ -34,11 +34,12 @@ Object* SeekPlayerBehaviorComponent::update(vector<Object*> objects) {
 		if (objects.at(i)->getType() == "Player") {
 			player = objects.at(i);
 		}
-
 		//Racoon will jump if an object is in its way, and if jumpCooldown is 0
 		else if (jumpCooldown <= 0 && objectIsInRange(currentBody, currentSprite)) {
-			willJump = true;
-			jumpCooldown = COOLDOWN_TIME;	//Reset jumpCooldown
+			if (ownBody->getIsGrounded()) {
+				willJump = true;
+				jumpCooldown = COOLDOWN_TIME;	//Reset jumpCooldown
+			}
 		}
 	}
 

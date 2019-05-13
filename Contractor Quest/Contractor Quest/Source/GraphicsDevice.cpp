@@ -59,8 +59,8 @@ GraphicsDevice::GraphicsDevice(Uint32 width, Uint32 height, bool fullScreen = tr
 		printf("Renderer could not be created! SDL_Error: %s\n", SDL_GetError());
 	}
 
-	//set the background color (default)
-	SDL_SetRenderDrawColor(renderer, 135, 206, 235, 255);
+	//initialize the background color (default of black).  Color is changed by load level.
+	SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
 
 	//========================================
 	//create view
