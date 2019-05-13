@@ -20,6 +20,7 @@ Library::Library(GraphicsDevice* graphicsDevice)
 	artLibrary["SteelBeam"] = new Texture(graphicsDevice, "./Assets/Images/SteelBeam.png");
 
 	soundEffectLibrary["walking"] = Mix_LoadWAV("./Assets/Sounds/walking.ogg");
+	soundEffectLibrary["throwing"] = Mix_LoadWAV("./Assets/Sounds/throwing.ogg");
 
 	musicLibrary["background"] = Mix_LoadMUS("./Assets/Sounds/background.ogg");
 }

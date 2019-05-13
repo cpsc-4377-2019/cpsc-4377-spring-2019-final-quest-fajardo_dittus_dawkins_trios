@@ -54,6 +54,7 @@ Engine::Engine(vector<string> levelPaths)
 		exit(1);
 	}
 
+	Mix_VolumeMusic(20);
 	Mix_PlayMusic(soundDevice->getMusic("background"), -1);
 
 	view = graphicsDevice->getView();
