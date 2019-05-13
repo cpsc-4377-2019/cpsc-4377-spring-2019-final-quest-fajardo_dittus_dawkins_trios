@@ -11,6 +11,7 @@ SeekPlayerBehaviorComponent::SeekPlayerBehaviorComponent(Object * owner, ObjectF
 }
 
 SeekPlayerBehaviorComponent::~SeekPlayerBehaviorComponent() {
+
 }
 
 Object* SeekPlayerBehaviorComponent::update(vector<Object*> objects) {
