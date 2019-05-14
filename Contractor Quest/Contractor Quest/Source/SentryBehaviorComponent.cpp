@@ -10,6 +10,7 @@
 #include "Initializers.h"
 #include "PhysicsDevice.h"
 #include "ObjectFactory.h"
+#include "Library.h"
 
 SentryBehaviorComponent::SentryBehaviorComponent(Object * owner, ObjectFactoryPresets presets) : Component(owner) {
 }
@@ -21,6 +22,7 @@ bool SentryBehaviorComponent::initialize(ObjectFactoryPresets presets) {
 
 	objectFactory = presets.objectFactory;
 	sDevice = presets.sDevice;
+	library = presets.library;
 
 	if (objectFactory != nullptr) {
 		return true;
@@ -77,6 +79,11 @@ Object* SentryBehaviorComponent::update(vector<Object*> objects) {
 				presets.bodyInitializers.pDevice = ownBody->pDevice;
 				presets.pDevice = ownBody->pDevice;
 				presets.objectType = "Rock";
+				presets.spriteInitializers.textures.push_back(library->artLibrary.find("Rock")->second);
+				presets.spriteInitializers.textures.push_back(library->artLibrary.find("Rock")->second);
+				presets.spriteInitializers.textures.push_back(library->artLibrary.find("Rock")->second);
+				presets.spriteInitializers.textures.push_back(library->artLibrary.find("Rock")->second);
+				presets.spriteInitializers.currentTexture = presets.spriteInitializers.textures[0];
 				presets.bodyInitializers.isDead = false;
 				presets.bodyCompNeeded = true;
 				presets.spriteCompNeeded = true;
@@ -95,7 +102,7 @@ Object* SentryBehaviorComponent::update(vector<Object*> objects) {
 					presets.bodyInitializers.angularVelocity = -10.0f;
 				}
 				else if (ownBody->getState() == BodyComponent::STANDING_RIGHT) {
-					presets.bodyInitializers.position.x = ownBody->getPosition().x + ownSprite->texture->getWidth() + 5.0f;
+					presets.bodyInitializers.position.x = ownBody->getPosition().x + ownSprite->currentTexture->getWidth() + 5.0f;
 					presets.bodyInitializers.linearVelocity = { 500.0f, -20.0f };
 					presets.bodyInitializers.angularVelocity = 10.0f;
 				}

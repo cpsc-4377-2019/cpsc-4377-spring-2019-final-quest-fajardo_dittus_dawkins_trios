@@ -2,6 +2,7 @@
 #include "Object.h"
 #include "BodyComponent.h"
 #include "SpriteComponent.h"
+#include "WanderBehaviorComponent.h"
 #include "Texture.h"
 #include "PhysicsDevice.h"
 #include <string>
@@ -73,59 +74,12 @@ void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold
 		playerObject->setIsDead(true);
 	}
 
-	//Handle collisions between racoons and blocks in racoons path.
+	//Handle collisions between racoons and obstacles in racoons path.
 	//Results in racoon turning around.
-	if (racoonBlockContact(objectA, objectB)) {
-		//Make racoon and block component pointers make the following work easier.
-		BodyComponent* racoonBody = nullptr;
-		SpriteComponent* racoonSprite = nullptr;
-		BodyComponent* blockBody = nullptr;
-		SpriteComponent* blockSprite = nullptr;
-		if (objectA->getType() == "Racoon") {
-			racoonBody = objectA->GetComponent<BodyComponent>();
-			racoonSprite = objectA->GetComponent<SpriteComponent>();
-			blockBody = objectB->GetComponent<BodyComponent>();
-			blockSprite = objectB->GetComponent<SpriteComponent>();
-		}
-		else {
-			racoonBody = objectB->GetComponent<BodyComponent>();
-			racoonSprite = objectB->GetComponent<SpriteComponent>();
-			blockBody = objectA->GetComponent<BodyComponent>();
-			blockSprite = objectA->GetComponent<SpriteComponent>();
-		}
+	handleRacoonObstacleContact(objectA, objectB);
 
-		//Check that the block is not underneath the racoon.
-		if ((blockBody->getPosition().y  < racoonBody->getPosition().y + racoonSprite->texture->getHeight()) ||
-			(blockBody->getPosition().y + blockSprite->texture->getHeight() < racoonBody->getPosition().y + racoonSprite->texture->getHeight())) {
-			//Turn around.
-			if (racoonBody->getState() == BodyComponent::RUNNING_LEFT) {
-				racoonBody->setState(BodyComponent::RUNNING_RIGHT);
-			}
-			else if (racoonBody->getState() == BodyComponent::RUNNING_RIGHT) {
-				racoonBody->setState(BodyComponent::RUNNING_LEFT);
-			}
-		}
-	}
-
-	//Sets mob's isGrounded based on whether they are in contact with a surface.
-	//Check is based on whether a dynamic object is in contact with a kinetic or static object.
-	//This also allows for wall jumps.
-	if (mobSurfaceContact(bodyA, bodyB)) {
-		if (bodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
-			objectA->GetComponent<BodyComponent>()->setIsGrounded(true);
-		}
-		else {
-			objectB->GetComponent<BodyComponent>()->setIsGrounded(true);
-		}
-	}
-	else {
-		if (bodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
-			objectA->GetComponent<BodyComponent>()->setIsGrounded(false);
-		}
-		else if (bodyB->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
-			objectB->GetComponent<BodyComponent>()->setIsGrounded(false);
-		}
-	}
+	//Sets isGrounded based on whether a dynamic object is in contact with an object.
+	handleMobSurfaceContact(bodyA, objectA, bodyB, objectB);
 }
 
 //Returns true if one object is the player and the other is an enemy mob, else return false.
@@ -148,50 +102,56 @@ bool ContactListener::playerMobContact(Object* objectA, Object* objectB) {
 }
 
 //Returns true if one object is a racoon and the other is a block, else returns false.
-bool ContactListener::racoonBlockContact(Object* objectA, Object* objectB) {
-	string objectAType = objectA->getType();
-	string objectBType = objectB->getType();
+void ContactListener::handleRacoonObstacleContact(Object* objectA, Object* objectB) {
 
-	if (objectAType == "Racoon" || objectBType == "Racoon") {
-		if (objectAType == "Block" || objectBType == "Block") {
-			return true;
+	if (objectA->getType() == "Racoon" || objectB->getType() == "Racoon") {
+		//Make racoon and obstacle component pointers make the following work easier.
+		BodyComponent* racoonBody = nullptr;
+		SpriteComponent* racoonSprite = nullptr;
+		WanderBehaviorComponent* racoonWanderBehavior = nullptr;
+		BodyComponent* obstacleBody = nullptr;
+		SpriteComponent* obstacleSprite = nullptr;
+		if (objectA->getType() == "Racoon") {
+			racoonBody = objectA->GetComponent<BodyComponent>();
+			racoonSprite = objectA->GetComponent<SpriteComponent>();
+			racoonWanderBehavior = objectA->GetComponent<WanderBehaviorComponent>();
+			obstacleBody = objectB->GetComponent<BodyComponent>();
+			obstacleSprite = objectB->GetComponent<SpriteComponent>();
 		}
 		else {
-			return false;
+			racoonBody = objectB->GetComponent<BodyComponent>();
+			racoonSprite = objectB->GetComponent<SpriteComponent>();
+			racoonWanderBehavior = objectB->GetComponent<WanderBehaviorComponent>();
+			obstacleBody = objectA->GetComponent<BodyComponent>();
+			obstacleSprite = objectA->GetComponent<SpriteComponent>();
+		}
+
+		//Check that the obstacle is not underneath or on top of the racoon.
+		if (((obstacleBody->getPosition().y < racoonBody->getPosition().y + racoonSprite->currentTexture->getHeight()) ||
+			(obstacleBody->getPosition().y + obstacleSprite->currentTexture->getHeight() < racoonBody->getPosition().y + racoonSprite->currentTexture->getHeight()))
+			&& ((obstacleBody->getPosition().y + obstacleSprite->currentTexture->getHeight()) > (racoonBody->getPosition().y))) {
+			if (racoonWanderBehavior->turnTimer <= 0) {
+				//Turn around.
+				if (racoonBody->getState() == BodyComponent::RUNNING_LEFT) {
+					racoonBody->setState(BodyComponent::RUNNING_RIGHT);
+				}
+				else if (racoonBody->getState() == BodyComponent::RUNNING_RIGHT) {
+					racoonBody->setState(BodyComponent::RUNNING_LEFT);
+				}
+
+				racoonWanderBehavior->turnTimer = racoonWanderBehavior->TURN_COOLDOWN;
+			}
 		}
 	}
-	else {
-		return false;
-	}
 }
 
-//Checks if objectA is above or below objectB (may need a margin of error)
-bool ContactListener::isAboveOrBelow(Object * objectA, Object * objectB)
-{
-	bool shouldNotCollide = false;
-
-	BodyComponent* sdlBodyA = objectA->GetComponent<BodyComponent>();
-	BodyComponent* sdlBodyB = objectB->GetComponent<BodyComponent>();
-	SpriteComponent* spriteA = objectA->GetComponent<SpriteComponent>();
-	SpriteComponent* spriteB = objectB->GetComponent<SpriteComponent>();
-
-	if (sdlBodyA->getPosY() < (sdlBodyB->getPosY() - spriteA->texture->getHeight()) ||
-		sdlBodyA->getPosY() > (sdlBodyB->getPosY() + spriteB->texture->getHeight())) shouldNotCollide = true;
-
-	return shouldNotCollide;
-}
-
-//Checks if a dynamic object has made contact with a kinematic or static object.
-bool ContactListener::mobSurfaceContact(b2Body* b2BodyA, b2Body* b2BodyB) {
-	if (b2BodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC &&
-		(b2BodyB->GetType() == GAME_BODY_TYPE::GAME_STATIC || b2BodyB->GetType() == GAME_BODY_TYPE::GAME_KINEMATIC)) {
-		return true;
+//Checks if a dynamic object has made contact with an object.  If so, it is set to be grounded.
+//This is used to limit jumping and allows for wall jumps.
+void ContactListener::handleMobSurfaceContact(b2Body* b2BodyA, Object* objectA, b2Body* b2BodyB, Object* objectB) {
+	if (b2BodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
+		objectA->GetComponent<BodyComponent>()->setIsGrounded(true);
 	}
-	else if ((b2BodyA->GetType() == GAME_BODY_TYPE::GAME_STATIC || b2BodyA->GetType() == GAME_BODY_TYPE::GAME_KINEMATIC) &&
-		b2BodyA->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
-		return true;
-	}
-	else {
-		return false;
+	if (b2BodyB->GetType() == GAME_BODY_TYPE::GAME_DYNAMIC) {
+		objectB->GetComponent<BodyComponent>()->setIsGrounded(true);
 	}
 }

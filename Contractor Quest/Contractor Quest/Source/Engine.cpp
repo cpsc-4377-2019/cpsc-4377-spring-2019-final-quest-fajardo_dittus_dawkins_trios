@@ -29,6 +29,7 @@ Engine::Engine()
 
 	view = graphicsDevice->getView();
 	currentLevel = 0;
+	isRunning = true;
 }
 
 //constructor that loads level
@@ -61,6 +62,7 @@ Engine::Engine(vector<string> levelPaths)
 
 	levels = levelPaths;
 	currentLevel = 0;
+	isRunning = true;
 
 	//Load the first level
 	loadLevel(levels.at(currentLevel));
@@ -75,7 +77,6 @@ Engine::~Engine() {
 void Engine::reset() {
 
 	view->update(0.0f);
-	graphicsDevice->changeBackground(100, 100, 100, 255);	//FIXME: abstract this if time allows
 
 	for (int i = 0; i < objects.size(); i++) {
 		delete objects.at(i);
@@ -95,9 +96,17 @@ void Engine::loadLevel(string levelPath) {
 	tinyxml2::XMLElement* root = doc.RootElement();
 	tinyxml2::XMLElement* element = root->FirstChildElement();
 
+	int r = 0, g = 0, b = 0, a = 0 ; //Values used for renders background.
 	while (element) {
 		elementType = element->Attribute("elementType");
-		if (elementType == "Joint") {
+		if (elementType == "Background") {
+			element->QueryIntAttribute("r", &r);
+			element->QueryIntAttribute("g", &g);
+			element->QueryIntAttribute("b", &b);
+			element->QueryIntAttribute("a", &a);
+			graphicsDevice->changeBackground(r, g, b, a);
+		}
+		else if (elementType == "Joint") {
 			createJointedObject(element, graphicsDevice, objectLibrary, inputDevice, pDevice, soundDevice);
 		}
 		else {
@@ -151,11 +160,11 @@ void Engine::update() {
 	//Keep player within the horizontal bounds of the view and from going left of the leftmost portion of the map.
 	if (playerBody->getPosX() < 0) {
 		playerBody->setLinearVelocity({ 0.0f, playerBody->getVelocity().y });
-		playerBody->setPosition({ (playerSprite->texture->getWidth() / 2.0f), playerBody->getPosY() + playerSprite->texture->getHeight()/2.0f });
+		playerBody->setPosition({ (playerSprite->currentTexture->getWidth() / 2.0f), playerBody->getPosY() + playerSprite->currentTexture->getHeight()/2.0f });
 	}
 	else if (playerBody->getPosX() < view->getPosX()) {
 		playerBody->setLinearVelocity({ 0.0f, playerBody->getVelocity().y });
-		playerBody->setPosition({ (playerSprite->texture->getWidth() / 2.0f) + view->getPosX(), playerBody->getPosY() + playerSprite->texture->getHeight() / 2.0f });
+		playerBody->setPosition({ (playerSprite->currentTexture->getWidth() / 2.0f) + view->getPosX(), playerBody->getPosY() + playerSprite->currentTexture->getHeight() / 2.0f });
 	}
 
 	//If the player has exceeded the mid-point point of the view, move the view so that the player 
@@ -193,36 +202,10 @@ bool Engine::run() {
 		return false;
 	}
 
-	//Handle Win and Loss conditions
-	vector<Object*>::iterator objectIter;
-	for (objectIter = objects.begin(); objectIter < objects.end(); objectIter++) {
+	checkWinLoseConditions();
 
-		//If the player dies, Game Over
-		if ((*objectIter)->getType() == "Player") {
-			if ((*objectIter)->getIsDead()) {
-				cout << "Player died.  Game Over" << endl;
-				return false;
-			}
-		}
-
-		//If level is complete, transition to the next level or end the game if there are no others
-		else if ((*objectIter)->getType() == "Building" || (*objectIter)->getType() == "Lunchbox") {
-			if ((*objectIter)->getIsDead()) {
-
-				cout << "Level Complete!" << endl;
-				currentLevel++;
-
-				//Go to next level if there are others
-				if (currentLevel < NUM_LEVELS) {
-					reset();
-					loadLevel(levels.at(currentLevel));
-					break;
-				}
-
-				//End the game if there are no more levels
-				else return false;
-			}
-		}
+	if (!isRunning) {
+		return false;
 	}
 
 	//Start frame timer
@@ -258,4 +241,38 @@ void Engine::createJointedObject(tinyxml2::XMLElement * jointElement, GraphicsDe
 	objects.push_back(object2);
 
 	pDevice->createDistanceJoint(object1, object2, jointPresets.JointLimit, jointPresets.AnchorA, jointPresets.AnchorB, jointPresets.collide);
+}
+
+//Handle Win and Loss conditions
+void Engine::checkWinLoseConditions() {
+	vector<Object*>::iterator objectIter;
+	for (objectIter = objects.begin(); objectIter < objects.end(); objectIter++) {
+
+		//If the player dies, Game Over
+		if ((*objectIter)->getType() == "Player") {
+			if ((*objectIter)->getIsDead()) {
+				cout << "Player died.  Game Over" << endl;
+				isRunning = false;
+			}
+		}
+
+		//If level is complete, transition to the next level or end the game if there are no others
+		else if ((*objectIter)->getType() == "Building" || (*objectIter)->getType() == "Lunchbox") {
+			if ((*objectIter)->getIsDead()) {
+
+				cout << "Level Complete!" << endl;
+				currentLevel++;
+
+				//Go to next level if there are others
+				if (currentLevel < NUM_LEVELS) {
+					reset();
+					loadLevel(levels.at(currentLevel));
+					break;
+				}
+
+				//End the game if there are no more levels
+				else isRunning = false;
+			}
+		}
+	}
 }

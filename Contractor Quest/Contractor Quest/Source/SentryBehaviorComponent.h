@@ -6,6 +6,7 @@
 class SoundDevice;
 class Texture;
 class ObjectFactory;
+class Library;
 
 class SentryBehaviorComponent : public Component {
 	public:
@@ -23,6 +24,7 @@ class SentryBehaviorComponent : public Component {
 		int rockTimer = 0;	//Timer to determine when rocks can be thrown
 		ObjectFactory* objectFactory; //Used call create to create rocks.
 		SoundDevice* sDevice;
+		Library* library;
 };
 
 #endif

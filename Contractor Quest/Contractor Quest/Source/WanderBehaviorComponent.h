@@ -18,6 +18,8 @@ class WanderBehaviorComponent: public Component {
 		void finish();
 
 		const float RUN_SPEED = 100.0f;
+		const int TURN_COOLDOWN = 100;
+		int turnTimer = 0;
 
 	private:
 };

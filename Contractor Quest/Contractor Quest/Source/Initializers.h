@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <vector>
 #include "Definitions.h"
 
 using namespace std;
@@ -15,12 +16,14 @@ class GraphicsDevice;
 class PhysicsDevice;
 class Object;
 class ObjectFactory;
+class Library;
 
 struct SpritePresets
 {
 	string textString = " ";
-	Texture* spriteTexture = nullptr;
+	Texture* currentTexture = nullptr;
 	GraphicsDevice* gdevice = nullptr;
+	vector<Texture*> textures;
 
 };
 
@@ -56,7 +59,6 @@ struct BodyPresets
 struct ObjectFactoryPresets
 {
 	string objectType = "";
-	string textPath = "";
 	SpritePresets spriteInitializers;
 	BodyPresets bodyInitializers;
 	GraphicsDevice* device = nullptr;
@@ -65,6 +67,7 @@ struct ObjectFactoryPresets
 	PhysicsDevice* pDevice = nullptr;
 	ObjectFactory* objectFactory = nullptr;
 	SoundDevice* sDevice = nullptr;
+	Library* library = nullptr;
 
 	//Used in dynamic object creation
 	bool bodyCompNeeded = false;

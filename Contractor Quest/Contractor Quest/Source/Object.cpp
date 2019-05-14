@@ -75,7 +75,7 @@ string Object::getType() {
 }
 
 Texture* Object::getTexture() {
-	return GetComponent<SpriteComponent>()->texture;
+	return GetComponent<SpriteComponent>()->currentTexture;
 }
 
 PhysicsDevice* Object::getPhysicsDevice() {
