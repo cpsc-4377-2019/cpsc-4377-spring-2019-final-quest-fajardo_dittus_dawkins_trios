@@ -19,6 +19,9 @@ public:
 	void handleRacoonObstacleContact(Object* objectA, Object* objectB);
 	void handleMobSurfaceContact(b2Body* b2BodyA, Object* objectA, b2Body* b2BodyB, Object* objectB);
 
+private:
+	const float ERROR_MARGIN = 20.0f;
+
 };
 
 #endif

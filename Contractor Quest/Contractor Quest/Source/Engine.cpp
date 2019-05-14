@@ -264,7 +264,7 @@ void Engine::checkWinLoseConditions() {
 				currentLevel++;
 
 				//Go to next level if there are others
-				if (currentLevel < NUM_LEVELS) {
+				if (currentLevel < levels.size()) {
 					reset();
 					loadLevel(levels.at(currentLevel));
 					break;

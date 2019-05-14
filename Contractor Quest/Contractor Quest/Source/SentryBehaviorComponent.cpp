@@ -109,7 +109,7 @@ Object* SentryBehaviorComponent::update(vector<Object*> objects) {
 
 				//Create rock.
 				rock = objectFactory->create(presets);
-				sDevice->playSound("throwing", 0, 1);
+				sDevice->playSound("throwing", 0, -1);
 			}
 		}
 		else {
@@ -131,7 +131,7 @@ Object* SentryBehaviorComponent::update(vector<Object*> objects) {
 		}
 	}
 
-	return rock;
+	return rock; //Returns an rock object if created; otherwise, returns nullptr
 }
 
 void SentryBehaviorComponent::start() {

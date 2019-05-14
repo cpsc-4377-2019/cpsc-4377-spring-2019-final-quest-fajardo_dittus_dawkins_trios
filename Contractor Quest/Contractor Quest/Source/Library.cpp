@@ -51,7 +51,9 @@ Library::~Library() {
 	delete artLibrary.at("SteelBeam");
 
 	delete musicLibrary.at("background");
+
 	delete soundEffectLibrary.at("walking");
+	delete soundEffectLibrary.at("throwing");
 
 	//Empty artLibrary map
 	artLibrary.clear();

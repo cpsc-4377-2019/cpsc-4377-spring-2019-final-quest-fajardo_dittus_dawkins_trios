@@ -22,9 +22,9 @@ class SentryBehaviorComponent : public Component {
 		const float AGGRO_RADIUS = 750.0f;
 		const int ROCK_COOLDOWN = 150;
 		int rockTimer = 0;	//Timer to determine when rocks can be thrown
-		ObjectFactory* objectFactory; //Used call create to create rocks.
-		SoundDevice* sDevice;
+		ObjectFactory* objectFactory; //This and the library are used to create rocks.
 		Library* library;
+		SoundDevice* sDevice;
 };
 
 #endif

@@ -37,7 +37,7 @@ void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold
 		objectB->setIsDead(true);
 	}
 
-	//If a rock collides with an object other than a rock, set the rock to be destroyed.
+	//If a rock collides with an object other than a rock or crazyPerson, set the rock to be destroyed.
 	if (objectA->getType() == "Rock" && (objectB->getType() != "Rock" && objectB->getType() != "CrazyPerson" && objectB->getType() != "CrazyPersonArm")) {
 		objectA->setIsDead(true);
 	}
@@ -49,29 +49,30 @@ void ContactListener::PreSolve(b2Contact* contact, const b2Manifold* oldManifold
 	//First determine if player mob contact occured.
 	if (playerMobContact(objectA, objectB)) {
 
-		//Make player and mob b2Body & object pointers to make future checks easier.
-		b2Body* playerB2Body = nullptr;
+		//Make player and mob object pointers to make future checks easier.
 		Object* playerObject = nullptr;
-		b2Body* mobB2Body = nullptr;
 		Object* mobObject = nullptr;
 		if (objectA->getType() == "Player") {
-			playerB2Body = bodyA;
 			playerObject = objectA;
-			mobB2Body = bodyB;
 			mobObject = objectB;
 		}
 		else {
-			playerB2Body = bodyB;
 			playerObject = objectB;
-			mobB2Body = bodyA;
 			mobObject = objectA;
 		}
-		
-		//FIXME: For now, player mob contact results in the death of the player.  In the future, this will
-		//likely be changed to check how the contact occured.  If the player stomped the mob, the mob will be
-		//killed instead.  Therefore, the pointers remain to be used when such changes are made.
 
-		playerObject->setIsDead(true);
+		//Create Component pointers to make the following checks easier.
+		BodyComponent* playerBody = playerObject->GetComponent<BodyComponent>();
+		SpriteComponent* playerSprite = playerObject->GetComponent<SpriteComponent>();
+		BodyComponent* mobBody = mobObject->GetComponent<BodyComponent>();
+		SpriteComponent* mobSprite = mobObject->GetComponent<SpriteComponent>();
+
+		if (((playerBody->getPosition().y + playerSprite->currentTexture->getHeight() - ERROR_MARGIN) <= mobBody->getPosition().y)) {
+			mobObject->setIsDead(true);
+		}
+		else {
+			playerObject->setIsDead(true);
+		}
 	}
 
 	//Handle collisions between racoons and obstacles in racoons path.

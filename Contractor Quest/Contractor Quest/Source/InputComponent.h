@@ -29,13 +29,13 @@ class InputComponent: public Component {
 
 		int jumpCooldown;
 		int soundTimer;
-		const int COOLDOWN_TIME = 50;	//FIXME: TEMPORARY! delete these if another solution is used
+		const int COOLDOWN_TIME = 50;
 		const int SOUND_INCREMENT = 50;
 
 		const float RUN_SPEED = 900.0f;
 		const float MAX_VELOCITY = 32000.0f;
 		const float JUMP_HEIGHT = 1000.0f;
-		const float FAST_FALL_SPEED = 100.0f;
+		const float FAST_FALL_SPEED = 50.0f;
 		
 };
 
