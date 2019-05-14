@@ -23,7 +23,7 @@ class BodyComponent: public Component {
 
 		bool initialize(ObjectFactoryPresets presets);
 		
-		enum STATE_TYPES { STANDING_LEFT, STANDING_RIGHT, RUNNING_LEFT, RUNNING_RIGHT };
+		enum STATE_TYPES { STANDING_LEFT, STANDING_RIGHT, RUNNING_LEFT, RUNNING_RIGHT, NUM_STATES };
 
 		Position getPosition();
 		EngineFloat getAngle();
@@ -31,7 +31,6 @@ class BodyComponent: public Component {
 		EngineFloat getPosY(); 
 		Position getVelocity();
 		int getState() { return state; }
-		GAME_BODY_TYPE getBodyType() { return bodyType; }
 		bool getIsGrounded() { return isGrounded; }
 
 		void setPosition(Position position);
@@ -51,7 +50,6 @@ protected:
 		float angle;
 		int state;
 		bool isGrounded; //Used to determine if the object has a surface to jump off of.
-		GAME_BODY_TYPE bodyType;
 };
 
 #endif

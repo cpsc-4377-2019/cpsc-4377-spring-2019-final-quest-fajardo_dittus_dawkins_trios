@@ -22,14 +22,14 @@ class SpriteComponent : public Component {
 		~SpriteComponent();
 
 		bool initialize(ObjectFactoryPresets presets);
+		void addTexture(Texture* texture);
 
 		void draw();
 
 		Object* update(vector<Object*>);
 		void start();
 		void finish();
-		string textPath;
-		Texture* texture = nullptr;
+		Texture* currentTexture = nullptr;
 		BodyComponent* spriteBody;
 		SpriteComponent* sprite;
 		
@@ -37,6 +37,7 @@ class SpriteComponent : public Component {
 	protected:
 		GraphicsDevice* gDevice = nullptr;
 		PhysicsDevice* pDevice = nullptr;
+		vector<Texture*> textures;
 };
 
 #endif

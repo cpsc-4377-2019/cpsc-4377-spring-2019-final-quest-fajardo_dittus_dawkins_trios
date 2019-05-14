@@ -34,6 +34,8 @@ public:
 private:
 
 	void createJointedObject(tinyxml2::XMLElement* jointElement, GraphicsDevice*, Library*, InputDevice*, PhysicsDevice*, SoundDevice*);
+	void checkWinLoseConditions();
+
 
 	Library* objectLibrary;
 	ObjectFactory* factory;
@@ -47,6 +49,7 @@ private:
 
 	int currentLevel;
 	vector<string> levels;
+	bool isRunning;
 };
 
 #endif

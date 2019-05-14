@@ -75,7 +75,14 @@ Object* ObjectFactory::create(tinyxml2::XMLElement* objectElement, GraphicsDevic
 		string componentName = componentElement->Attribute("name");
 		if (componentName == "Sprite")
 		{
-			presets.spriteInitializers.spriteTexture = objectLibrary->artLibrary.find(presets.objectType)->second;
+			for (tinyxml2::XMLElement* textureElement = componentElement->FirstChildElement(); textureElement; textureElement = textureElement->NextSiblingElement())
+			{
+				string textureName = textureElement->Attribute("textureName");
+				presets.spriteInitializers.textures.push_back(objectLibrary->artLibrary.find(textureName)->second);
+			}
+
+			//Set the current sprite to the first temporarly.  It will be update by the sprite component before the game displays.
+			presets.spriteInitializers.currentTexture = presets.spriteInitializers.textures[0];
 			presets.spriteInitializers.gdevice = graphicDevice;
 			presets.pDevice = pDevice;
 			newObject->addComponent(new SpriteComponent(newObject, presets.spriteInitializers));
@@ -100,6 +107,7 @@ Object* ObjectFactory::create(tinyxml2::XMLElement* objectElement, GraphicsDevic
 		}
 		else if (componentName == "SentryBehaviorComponent") {
 			presets.objectFactory = this;
+			presets.library = objectLibrary;
 			newObject->addComponent(new SentryBehaviorComponent(newObject, presets));
 		}
 	}
@@ -123,7 +131,7 @@ Object* ObjectFactory::create(ObjectFactoryPresets presets) {
 		newObject->addComponent(new BodyComponent(newObject, presets.bodyInitializers.pDevice, presets.bodyInitializers));
 	}
 	if (presets.spriteCompNeeded) {
-		presets.spriteInitializers.spriteTexture = objectLibrary->artLibrary.find(presets.objectType)->second;
+		presets.spriteInitializers.currentTexture = objectLibrary->artLibrary.find(presets.objectType)->second;
 		presets.spriteInitializers.gdevice = gDevice;
 		newObject->addComponent(new SpriteComponent(newObject, presets.spriteInitializers));
 	}

@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Level>
 
-  <Background elementType="Background" r="100" g="100" b="100" a="255"></Background>
+  <Background elementType="Background" r="100" g="100" b="100" a="255"/>
 
   <!--Not in current implementation
 	<Object elementType="Object" type="BreakableBlock">
 		<Component name="Body" posX="0.0f" posY="0.0f" angle="0.0f" state="0"/>
-		<Component name="Sprite" path = "./Assets/Images/BreakableBlock.png"/>	
+		<Component name="Sprite">
+      <Texture textureName="BreakableBlock"/>
+      <Texture textureName="BreakableBlock"/>
+      <Texture textureName="BreakableBlock"/>
+      <Texture textureName="BreakableBlock"/>
+    </Component>	
 	</Object> 
 	-->
 
@@ -14,53 +19,98 @@
 	<Joint elementType="Joint" type = "Distance" collide = "false" object1AnchorX="700.0f" object1AnchorY="200.0f" object2AnchorX="740.0f" object2AnchorY="195.0f" maxDistance="5.0f">
 		<Object elementType="Object" type="CrazyPerson">
 			<Component name="Body" posX="700.0f" posY="200.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-			<Component name="Sprite" path = "./Assets/Images/CrazyPerson.png"/>
+			<Component name="Sprite">
+        <Texture textureName="CrazyPersonLeft"/>
+        <Texture textureName="CrazyPersonRight"/>
+        <Texture textureName="CrazyPersonLeft"/>
+        <Texture textureName="CrazyPersonRight"/>
+      </Component>
 			<Component name="SentryBehaviorComponent"/>
 		</Object>
 		<Object elementType="Object" type="CrazyPersonArm">
 			<Component name="Body" posX="660.0f" posY="195.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-			<Component name="Sprite" path = "./Assets/Images/CrazyPersonArm.png"/>
+			<Component name="Sprite">
+        <Texture textureName="CrazyPersonArm"/>
+        <Texture textureName="CrazyPersonArm"/>
+        <Texture textureName="CrazyPersonArm"/>
+        <Texture textureName="CrazyPersonArm"/>
+      </Component>
 		</Object>
 	</Joint>
 
 	<Object elementType="Object" type="Player">
 		<Component name="Body" posX="100.0f" posY="50.0f" angle="0.0f" state="1" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-		<Component name= "Sprite" path = "./Assets/Images/Player.png"/>
+		<Component name="Sprite">
+      <Texture textureName="PlayerLeft"/>
+      <Texture textureName="PlayerRight"/>
+      <Texture textureName="PlayerLeft"/>
+      <Texture textureName="PlayerRight"/>
+    </Component>
 		<Component name= "InputComponent"/>
 	</Object>
 
 	<Object elementType="Object" type="Racoon">
 		<Component name="Body" posX="1000.0f" posY="608.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-		<Component name= "Sprite" path = "./Assets/Images/Racoon.png"/>
+		<Component name="Sprite">
+      <Texture textureName="RacoonLeft"/>
+      <Texture textureName="RacoonRight"/>
+      <Texture textureName="RacoonLeft"/>
+      <Texture textureName="RacoonRight"/>
+    </Component>
 		<Component name= "WanderBehaviorComponent"/>
 	</Object>
   
 	<Object elementType="Object" type="RabidRacoon">
 		<Component name="Body" posX="700.0f" posY="608.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-		<Component name= "Sprite" path = "./Assets/Images/RabidRacoon.png"/>
+		<Component name="Sprite">
+      <Texture textureName="RabidRacoonLeft"/>
+      <Texture textureName="RabidRacoonRight"/>
+      <Texture textureName="RabidRacoonLeft"/>
+      <Texture textureName="RabidRacoonRight"/>
+    </Component>
 		<Component name = "SeekPlayerBehaviorComponent"/>
 	</Object>
 
   <Object elementType="Object" type="Building">
     <Component name="Body" posX="800.0f" posY="350.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Building.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Building"/>
+      <Texture textureName="Building"/>
+      <Texture textureName="Building"/>
+      <Texture textureName="Building"/>
+    </Component>
   </Object>
   
   <Object elementType="Object" type="Lunchbox">
     <Component name="Body" posX="800.0f" posY="350.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Lunchbox.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Lunchbox"/>
+      <Texture textureName="Lunchbox"/>
+      <Texture textureName="Lunchbox"/>
+      <Texture textureName="Lunchbox"/>
+    </Component>
   </Object>
   
   <Object elementType="Object" type="Concrete">
     <Component name="Body" posX="800.0f" posY="350.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/concrete.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   -->
   
   <!-- Player Character(MUST be in xml) -->
   <Object elementType="Object" type="Player">
     <Component name="Body" posX="100.0f" posY="600.0f" angle="0.0f" state="1" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Player.png"/>
+    <Component name="Sprite">
+      <Texture textureName="PlayerLeft"/>
+      <Texture textureName="PlayerRight"/>
+      <Texture textureName="PlayerLeft"/>
+      <Texture textureName="PlayerRight"/>
+    </Component>
     <Component name= "InputComponent"/>
   </Object>
   
@@ -69,482 +119,1077 @@
   <!-- Bottom Blocks -->
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="0.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="35.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="70.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="105.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="140.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="175.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="210.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="245.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="280.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="315.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="350.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="385.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="420.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="455.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="490.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="525.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="560.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="595.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="595.0f" posY="735.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="630.0f" posY="735.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="665.0f" posY="735.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="700.0f" posY="735.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="735.0f" posY="735.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="770.0f" posY="735.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="805.0f" posY="735.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="840.0f" posY="735.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="875.0f" posY="735.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="875.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="910.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="945.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="980.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1000.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1035.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1070.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1105.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1140.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1175.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1210.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1245.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1280.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1315.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1350.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1385.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1420.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1455.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1490.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   
   <!-- PIT
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1525.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1560.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1595.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1630.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1665.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1700.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1735.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1770.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1805.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1840.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1875.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1910.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1945.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="1980.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2000.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2035.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2070.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2105.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2140.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2175.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2210.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2245.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2280.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2315.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2350.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2385.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2420.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2455.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2490.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2525.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2560.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2595.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2630.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2665.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2700.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2735.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2770.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2805.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2840.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2875.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2910.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2945.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="2980.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3000.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   -->
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3035.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3070.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3105.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3140.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3175.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3210.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3245.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3280.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3315.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3350.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3385.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3420.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3455.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3490.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3525.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3560.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3595.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3630.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3665.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3700.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3735.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3770.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3805.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3840.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3875.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3910.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3945.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3980.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="4000.0f" posY="700.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
 
   
@@ -552,60 +1197,130 @@
   <!-- CrazyPerson Platforms -->
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="615.0f" posY="245.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="615.0f" posY="280.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="650.0f" posY="280.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="685.0f" posY="280.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="720.0f" posY="280.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="755.0f" posY="280.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="755.0f" posY="245.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
 
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3365.0f" posY="100.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3365.0f" posY="135.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3400.0f" posY="135.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3435.0f" posY="135.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3470.0f" posY="135.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3505.0f" posY="135.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3505.0f" posY="100.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
 
   
@@ -613,22 +1328,42 @@
   <!-- Jumping Platforms -->
   <Object elementType="Object" type="SteelBeam">
     <Component name= "Body" posX="1635.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/SteelBeam.png"/>
+    <Component name="Sprite">
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+    </Component>
   </Object>
 
   <Object elementType="Object" type="SteelBeam">
     <Component name= "Body" posX="2035.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/SteelBeam.png"/>
+    <Component name="Sprite">
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+    </Component>
   </Object>
 
   <Object elementType="Object" type="SteelBeam">
     <Component name= "Body" posX="2435.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/SteelBeam.png"/>
+    <Component name="Sprite">
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+    </Component>
   </Object>
 
   <Object elementType="Object" type="SteelBeam">
     <Component name= "Body" posX="2835.0f" posY="500.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/SteelBeam.png"/>
+    <Component name="Sprite">
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+      <Texture textureName="SteelBeam"/>
+    </Component>
   </Object>
   
   
@@ -636,11 +1371,21 @@
   <!-- Other Obstacles -->
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3035.0f" posY="665.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   <Object elementType="Object" type="Concrete">
     <Component name= "Body" posX="3800.0f" posY="665.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Block.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+      <Texture textureName="Concrete"/>
+    </Component>
   </Object>
   
   
@@ -648,7 +1393,12 @@
   <!-- End of Level -->
   <Object elementType="Object" type="Lunchbox">
     <Component name= "Body" posX="4000.0f" posY="670.0f" angle="0.0f" state="1" friction="0.0f" density="1.0f" restitution="0.0f"  angularDamping="1.0f" linearDamping="1.0f" bodyType="STATIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Lunchbox.png"/>
+    <Component name="Sprite">
+      <Texture textureName="Lunchbox"/>
+      <Texture textureName="Lunchbox"/>
+      <Texture textureName="Lunchbox"/>
+      <Texture textureName="Lunchbox"/>
+    </Component>
   </Object>
   
   
@@ -656,13 +1406,23 @@
   <!-- Enemies -->
   <Object elementType="Object" type="Racoon">
     <Component name="Body" posX="3500.0f" posY="608.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/Racoon.png"/>
+    <Component name="Sprite">
+      <Texture textureName="RacoonLeft"/>
+      <Texture textureName="RacoonRight"/>
+      <Texture textureName="RacoonLeft"/>
+      <Texture textureName="RacoonRight"/>
+    </Component>
     <Component name= "WanderBehaviorComponent"/>
   </Object>
   
   <Object elementType="Object" type="RabidRacoon">
     <Component name="Body" posX="1200.0f" posY="608.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-    <Component name= "Sprite" path = "./Assets/Images/RabidRacoon.png"/>
+    <Component name="Sprite">
+      <Texture textureName="RabidRacoonLeft"/>
+      <Texture textureName="RabidRacoonRight"/>
+      <Texture textureName="RabidRacoonLeft"/>
+      <Texture textureName="RabidRacoonRight"/>
+    </Component>
     <Component name = "SeekPlayerBehaviorComponent"/>
   </Object>
 
@@ -670,24 +1430,44 @@
   <Joint elementType="Joint" type = "Distance" collide = "false" object1AnchorX="700.0f" object1AnchorY="200.0f" object2AnchorX="740.0f" object2AnchorY="195.0f" maxDistance="5.0f">
     <Object elementType="Object" type="CrazyPerson">
       <Component name="Body" posX="700.0f" posY="200.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-      <Component name="Sprite" path = "./Assets/Images/CrazyPerson.png"/>
+      <Component name="Sprite">
+        <Texture textureName="CrazyPersonLeft"/>
+        <Texture textureName="CrazyPersonRight"/>
+        <Texture textureName="CrazyPersonLeft"/>
+        <Texture textureName="CrazyPersonRight"/>
+      </Component>
       <Component name="SentryBehaviorComponent"/>
     </Object>
     <Object elementType="Object" type="CrazyPersonArm">
       <Component name="Body" posX="660.0f" posY="195.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-      <Component name="Sprite" path = "./Assets/Images/CrazyPersonArm.png"/>
+      <Component name="Sprite">
+        <Texture textureName="CrazyPersonArm"/>
+        <Texture textureName="CrazyPersonArm"/>
+        <Texture textureName="CrazyPersonArm"/>
+        <Texture textureName="CrazyPersonArm"/>
+      </Component>
     </Object>
   </Joint>
   
   <Joint elementType="Joint" type = "Distance" collide = "false" object1AnchorX="3435.0f" object1AnchorY="55.0f" object2AnchorX="3475.0f" object2AnchorY="50.0f" maxDistance="5.0f">
     <Object elementType="Object" type="CrazyPerson">
       <Component name="Body" posX="3435.0f" posY="55.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-      <Component name="Sprite" path = "./Assets/Images/CrazyPerson.png"/>
+      <Component name="Sprite">
+        <Texture textureName="CrazyPersonLeft"/>
+        <Texture textureName="CrazyPersonRight"/>
+        <Texture textureName="CrazyPersonLeft"/>
+        <Texture textureName="CrazyPersonRight"/>
+      </Component>
       <Component name="SentryBehaviorComponent"/>
     </Object>
     <Object elementType="Object" type="CrazyPersonArm">
       <Component name="Body" posX="3395.0f" posY="50.0f" angle="0.0f" state="0" friction="0.0f" density="0f" restitution="0.0f"  angularDamping="0.0f" linearDamping="0.0f" bodyType="DYNAMIC" bodyShape="RECTANGLE"/>
-      <Component name="Sprite" path = "./Assets/Images/CrazyPersonArm.png"/>
+      <Component name="Sprite">
+        <Texture textureName="CrazyPersonArm"/>
+        <Texture textureName="CrazyPersonArm"/>
+        <Texture textureName="CrazyPersonArm"/>
+        <Texture textureName="CrazyPersonArm"/>
+      </Component>
     </Object>
   </Joint>
   

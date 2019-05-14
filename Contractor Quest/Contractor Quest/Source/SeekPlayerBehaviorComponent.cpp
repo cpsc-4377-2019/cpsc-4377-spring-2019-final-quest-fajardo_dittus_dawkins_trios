@@ -78,16 +78,16 @@ bool SeekPlayerBehaviorComponent::objectIsInRange(BodyComponent* objectBody, Spr
 	//Calculations made with respect to the top left pixel of racoon and object
 
 	//Make sure the object isn't below or above the racoon's height (with 1-pixel margin of error)
-	if (ownBody->getPosY() < (objectBody->getPosY() + objectSprite->texture->getHeight() + 1.0f)
-		&& (ownBody->getPosY() > (objectBody->getPosY() - ownSprite->texture->getHeight() + 1.0f))) {
+	if (ownBody->getPosY() < (objectBody->getPosY() + objectSprite->currentTexture->getHeight() + 1.0f)
+		&& (ownBody->getPosY() > (objectBody->getPosY() - ownSprite->currentTexture->getHeight() + 1.0f))) {
 
 		//If the object is within detection range and in front of the racoon, set inRange to true
 		if (ownBody->getState() == BodyComponent::RUNNING_LEFT
-			&& ((abs(ownBody->getPosX() - (objectBody->getPosX() + objectSprite->texture->getWidth())) <= DETECTION_RANGE))
+			&& ((abs(ownBody->getPosX() - (objectBody->getPosX() + objectSprite->currentTexture->getWidth())) <= DETECTION_RANGE))
 			&& (ownBody->getPosX() > objectBody->getPosX())) inRange = true;
 
 		else if (ownBody->getState() == BodyComponent::RUNNING_RIGHT
-			&& ((abs((ownBody->getPosX() + ownSprite->texture->getWidth()) - objectBody->getPosX())) <= DETECTION_RANGE)
+			&& ((abs((ownBody->getPosX() + ownSprite->currentTexture->getWidth()) - objectBody->getPosX())) <= DETECTION_RANGE)
 			&& (ownBody->getPosX() < objectBody->getPosX())) inRange = true;
 	}
 

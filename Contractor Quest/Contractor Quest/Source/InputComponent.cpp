@@ -39,6 +39,7 @@ Object* InputComponent::update(vector<Object*> objects) {
 			sDevice->playSound("walking", 0, 2);
 		}
 		if (pDevice->GetLinearVelocity(owner).x >= (-MAX_VELOCITY*DT)) {
+			body->setState(BodyComponent::RUNNING_LEFT);
 			body->setLinearVelocity({ (pDevice->GetLinearVelocity(owner).x - (RUN_SPEED*DT)), (pDevice->GetLinearVelocity(owner)).y });
 		}
 		else {
@@ -51,11 +52,24 @@ Object* InputComponent::update(vector<Object*> objects) {
 			sDevice->playSound("walking", 0, 2);
 		}
 		if (pDevice->GetLinearVelocity(owner).x <= (MAX_VELOCITY * DT)) {
+			body->setState(BodyComponent::RUNNING_RIGHT);
 			body->setLinearVelocity({ (pDevice->GetLinearVelocity(owner).x + (RUN_SPEED*DT)), (pDevice->GetLinearVelocity(owner)).y });
 		}
 		else {
 			body->setLinearVelocity({ (MAX_VELOCITY * DT), (pDevice->GetLinearVelocity(owner)).y });
 		}
+	}
+	if (getEvent(InputDevice::NONE)) {
+		if (body->getState() == BodyComponent::STANDING_LEFT || body->getState() == BodyComponent::RUNNING_LEFT) {
+			body->setState(BodyComponent::STANDING_LEFT);
+		}
+		else if (body->getState() == BodyComponent::STANDING_RIGHT || body->getState() == BodyComponent::RUNNING_RIGHT) {
+			body->setState(BodyComponent::STANDING_RIGHT);
+		}
+	}
+
+	if (body->getVelocity().y != 0) {
+		body->setIsGrounded(false);
 	}
 
 	return nullptr; //This object never creates an object.

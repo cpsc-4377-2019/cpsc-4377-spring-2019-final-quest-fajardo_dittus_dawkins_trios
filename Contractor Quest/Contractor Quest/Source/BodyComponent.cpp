@@ -3,14 +3,11 @@
 #include "Definitions.h"
 #include "Object.h"
 
-
 BodyComponent::BodyComponent(Object* owner, PhysicsDevice* pDevice, BodyPresets presets) : Component(owner) {
 
 }
 
 bool BodyComponent::initialize(ObjectFactoryPresets presets) {
-
-	bodyType = presets.bodyInitializers.bodyType;
 
 	this->pDevice = presets.bodyInitializers.pDevice;
 	pDevice->CreateFixture(owner,
@@ -41,6 +38,7 @@ BodyComponent::~BodyComponent() {
 Object* BodyComponent::update(vector<Object*> objects) {
 	position = getPosition();
 	angle = getAngle();
+
 	return nullptr;
 }
 

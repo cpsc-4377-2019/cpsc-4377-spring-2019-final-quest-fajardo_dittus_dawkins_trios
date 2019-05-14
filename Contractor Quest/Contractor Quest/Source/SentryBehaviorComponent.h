@@ -5,6 +5,7 @@
 
 class Texture;
 class ObjectFactory;
+class Library;
 
 class SentryBehaviorComponent : public Component {
 	public:
@@ -21,6 +22,7 @@ class SentryBehaviorComponent : public Component {
 		const int ROCK_COOLDOWN = 150;
 		int rockTimer = 0;	//Timer to determine when rocks can be thrown
 		ObjectFactory* objectFactory; //Used call create to create rocks.
+		Library* library;
 };
 
 #endif
